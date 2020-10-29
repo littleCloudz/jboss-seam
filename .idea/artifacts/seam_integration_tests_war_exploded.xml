@@ -1,0 +1,35 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="seam-integration-tests:war exploded">
+    <output-path>$PROJECT_DIR$/seam-integration-tests/target/seam-integration-tests</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <exploded>true</exploded>
+        <module>seam-integration-tests</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="seam-integration-tests" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: org.jbpm.jbpm3:jbpm-jpdl:3.2.10.SP3_seam2" />
+          <element id="library" level="project" name="Maven: org.beanshell:bsh:2.0b4" />
+          <element id="archive" name="jboss-seam-2.3.2-SNAPSHOT.jar">
+            <element id="module-output" name="jboss-seam" />
+          </element>
+          <element id="library" level="project" name="Maven: org.jboss.el:jboss-el:1.0_02.CR6" />
+          <element id="library" level="project" name="Maven: javax.el:el-api:1.0" />
+          <element id="archive" name="jboss-seam-ui-2.3.2-SNAPSHOT.jar">
+            <element id="module-output" name="jboss-seam-ui" />
+          </element>
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/seam-integration-tests/target/seam-integration-tests/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="seam-integration-tests/web/Web" />
+    </root>
+  </artifact>
+</component>

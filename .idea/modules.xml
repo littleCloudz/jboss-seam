@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/bom/bom.iml" filepath="$PROJECT_DIR$/bom/bom.iml" />
+      <module fileurl="file://$PROJECT_DIR$/functional-tests/functional-tests.iml" filepath="$PROJECT_DIR$/functional-tests/functional-tests.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jboss-seam/jboss-seam.iml" filepath="$PROJECT_DIR$/jboss-seam/jboss-seam.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jboss-seam-debug/jboss-seam-debug.iml" filepath="$PROJECT_DIR$/jboss-seam-debug/jboss-seam-debug.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jboss-seam-excel/jboss-seam-excel.iml" filepath="$PROJECT_DIR$/jboss-seam-excel/jboss-seam-excel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jboss-seam-flex/jboss-seam-flex.iml" filepath="$PROJECT_DIR$/jboss-seam-flex/jboss-seam-flex.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jboss-seam-gen/jboss-seam-gen.iml" filepath="$PROJECT_DIR$/jboss-seam-gen/jboss-seam-gen.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jboss-seam-ioc/jboss-seam-ioc.iml" filepath="$PROJECT_DIR$/jboss-seam-ioc/jboss-seam-ioc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jboss-seam-mail/jboss-seam-mail.iml" filepath="$PROJECT_DIR$/jboss-seam-mail/jboss-seam-mail.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jboss-seam-pdf/jboss-seam-pdf.iml" filepath="$PROJECT_DIR$/jboss-seam-pdf/jboss-seam-pdf.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jboss-seam-remoting/jboss-seam-remoting.iml" filepath="$PROJECT_DIR$/jboss-seam-remoting/jboss-seam-remoting.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jboss-seam-resteasy/jboss-seam-resteasy.iml" filepath="$PROJECT_DIR$/jboss-seam-resteasy/jboss-seam-resteasy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jboss-seam-rss/jboss-seam-rss.iml" filepath="$PROJECT_DIR$/jboss-seam-rss/jboss-seam-rss.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jboss-seam-ui/jboss-seam-ui.iml" filepath="$PROJECT_DIR$/jboss-seam-ui/jboss-seam-ui.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jboss-seam-wicket/jboss-seam-wicket.iml" filepath="$PROJECT_DIR$/jboss-seam-wicket/jboss-seam-wicket.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/jboss-seam2.iml" filepath="$PROJECT_DIR$/.idea/jboss-seam2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/seam-integration-tests/seam-integration-tests.iml" filepath="$PROJECT_DIR$/seam-integration-tests/seam-integration-tests.iml" />
+    </modules>
+  </component>
+</project>

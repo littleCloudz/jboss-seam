@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="seam-integration-tests:war">
+    <output-path>$PROJECT_DIR$/seam-integration-tests/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>seam-integration-tests</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="seam-integration-tests.war">
+      <element id="artifact" artifact-name="seam-integration-tests:war exploded" />
+    </root>
+  </artifact>
+</component>

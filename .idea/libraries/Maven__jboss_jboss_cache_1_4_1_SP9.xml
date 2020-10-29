@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: jboss:jboss-cache:1.4.1.SP9">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/jboss/jboss-cache/1.4.1.SP9/jboss-cache-1.4.1.SP9.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/jboss/jboss-cache/1.4.1.SP9/jboss-cache-1.4.1.SP9-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/jboss/jboss-cache/1.4.1.SP9/jboss-cache-1.4.1.SP9-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

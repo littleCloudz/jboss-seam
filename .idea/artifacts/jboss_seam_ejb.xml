@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="ejb-jar" name="jboss-seam:ejb">
+    <output-path>$PROJECT_DIR$/jboss-seam/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>jboss-seam</module>
+        <packaging>ejb</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="jboss-seam.jar">
+      <element id="artifact" artifact-name="jboss-seam:ejb exploded" />
+    </root>
+  </artifact>
+</component>

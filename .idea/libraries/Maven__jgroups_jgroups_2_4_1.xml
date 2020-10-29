@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: jgroups:jgroups:2.4.1">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/jgroups/jgroups/2.4.1/jgroups-2.4.1.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/jgroups/jgroups/2.4.1/jgroups-2.4.1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/jgroups/jgroups/2.4.1/jgroups-2.4.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

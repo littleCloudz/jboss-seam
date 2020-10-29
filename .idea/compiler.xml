@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="jboss-seam-wicket" target="1.6" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="functional-tests" options="-source 1.6 -target 1.6" />
+      <module name="jboss-seam" options="-source 1.6 -target 1.6" />
+      <module name="jboss-seam-debug" options="-source 1.6 -target 1.6" />
+      <module name="jboss-seam-excel" options="-source 1.6 -target 1.6" />
+      <module name="jboss-seam-flex" options="-source 1.6 -target 1.6" />
+      <module name="jboss-seam-gen" options="-source 1.6 -target 1.6" />
+      <module name="jboss-seam-ioc" options="-source 1.6 -target 1.6" />
+      <module name="jboss-seam-mail" options="-source 1.6 -target 1.6" />
+      <module name="jboss-seam-pdf" options="-source 1.6 -target 1.6" />
+      <module name="jboss-seam-remoting" options="-source 1.6 -target 1.6" />
+      <module name="jboss-seam-resteasy" options="-source 1.6 -target 1.6" />
+      <module name="jboss-seam-rss" options="-source 1.6 -target 1.6" />
+      <module name="jboss-seam-ui" options="-source 1.6 -target 1.6" />
+      <module name="jboss-seam-wicket" options="-source 1.6 -target 1.6" />
+      <module name="seam-integration-tests" options="-source 1.6 -target 1.6" />
+    </option>
+  </component>
+</project>
