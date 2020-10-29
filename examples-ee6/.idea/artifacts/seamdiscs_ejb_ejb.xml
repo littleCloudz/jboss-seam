@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="ejb-jar" name="seamdiscs-ejb:ejb">
+    <output-path>$PROJECT_DIR$/seamdiscs/seamdiscs-ejb/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>seamdiscs-ejb</module>
+        <packaging>ejb</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="seamdiscs-ejb-2.3.0.CR1.jar">
+      <element id="artifact" artifact-name="seamdiscs-ejb:ejb exploded" />
+    </root>
+  </artifact>
+</component>

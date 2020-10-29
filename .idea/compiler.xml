@@ -3,6 +3,7 @@
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
       <module name="jboss-seam-wicket" target="1.6" />
+      <module name="seam-cdk-helper" target="1.6" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -21,6 +22,7 @@
       <module name="jboss-seam-rss" options="-source 1.6 -target 1.6" />
       <module name="jboss-seam-ui" options="-source 1.6 -target 1.6" />
       <module name="jboss-seam-wicket" options="-source 1.6 -target 1.6" />
+      <module name="seam-cdk-helper" options="-source 1.6 -target 1.6" />
       <module name="seam-integration-tests" options="-source 1.6 -target 1.6" />
     </option>
   </component>

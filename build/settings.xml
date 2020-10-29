@@ -87,7 +87,7 @@ under the License.
      | Specifies a further group identifier to use for plugin lookup.
     <pluginGroup>com.your.plugins</pluginGroup>
     -->
-    <pluginGroup>org.jboss.as.plugins</pluginGroup>
+    <pluginGroup>org.jboss.maven.plugins</pluginGroup>
   </pluginGroups>
 
 
@@ -229,6 +229,27 @@ under the License.
       </pluginRepositories>
     </profile>
 
+    <profile>
+      <id>jboss-deprecated-repository</id>
+      <repositories>
+        <repository>
+          <id>jboss-deprecated-repository</id>
+          <name>JBoss Deprecated Maven Repository</name>
+          <url>https://repository.jboss.org/nexus/content/repositories/deprecated/</url>
+          <layout>default</layout>
+          <releases>
+            <enabled>true</enabled>
+            <updatePolicy>never</updatePolicy>
+          </releases>
+          <snapshots>
+            <enabled>false</enabled>
+            <updatePolicy>never</updatePolicy>
+          </snapshots>
+        </repository>
+      </repositories>
+    </profile>
+
+    
     <profile>
       <id>jboss-staging-repository</id>
       <repositories>

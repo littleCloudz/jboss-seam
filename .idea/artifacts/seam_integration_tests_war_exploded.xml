@@ -16,12 +16,12 @@
         <element id="directory" name="lib">
           <element id="library" level="project" name="Maven: org.jbpm.jbpm3:jbpm-jpdl:3.2.10.SP3_seam2" />
           <element id="library" level="project" name="Maven: org.beanshell:bsh:2.0b4" />
-          <element id="archive" name="jboss-seam-2.3.2-SNAPSHOT.jar">
+          <element id="archive" name="jboss-seam-2.3.0.CR1.jar">
             <element id="module-output" name="jboss-seam" />
           </element>
           <element id="library" level="project" name="Maven: org.jboss.el:jboss-el:1.0_02.CR6" />
           <element id="library" level="project" name="Maven: javax.el:el-api:1.0" />
-          <element id="archive" name="jboss-seam-ui-2.3.2-SNAPSHOT.jar">
+          <element id="archive" name="jboss-seam-ui-2.3.0.CR1.jar">
             <element id="module-output" name="jboss-seam-ui" />
           </element>
         </element>

@@ -4,7 +4,7 @@
 	<parent>
 	   <groupId>org.jboss.seam</groupId>
        <artifactId>jboss-seam-parent</artifactId>		
-		<version>2.3.2-SNAPSHOT</version>
+		<version>2.3.0.CR1</version>
 		<relativePath>../pom.xml</relativePath>
 	</parent>
 
@@ -32,9 +32,9 @@
                     <configuration>
                          <exportAntProperties>true</exportAntProperties>          
                          <target>              
-                            <property name="test.lib.dir" location="target/arquillian/" />
+                            <property name="test.lib.dir"  location="target/arquillian/" />
                             <property name="version.jboss-as7" value="${version.jbossas7}" />
-                            <ant antfile="get-arquillian-libs.xml" target="copyarq" />
+                            <ant antfile="get-arquillian-libs.xml" target="copyarq"/>
                         </target>
                     </configuration>
                     <goals>
@@ -96,6 +96,10 @@
 		</dependency>
 		<dependency>
 			<groupId>org.jboss.seam</groupId>
+			<artifactId>jboss-seam-jul</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.jboss.seam</groupId>
 			<artifactId>jboss-seam-mail</artifactId>
 		</dependency>
 		<dependency>
@@ -146,6 +150,12 @@
 		<dependency>
 			<groupId>org.jboss.seam</groupId>
 			<artifactId>jboss-seam-ioc</artifactId>
+			<version>${project.version}</version>
+			<classifier>sources</classifier>
+		</dependency>
+		<dependency>
+			<groupId>org.jboss.seam</groupId>
+			<artifactId>jboss-seam-jul</artifactId>
 			<version>${project.version}</version>
 			<classifier>sources</classifier>
 		</dependency>
@@ -262,6 +272,6 @@
         <dependency>
             <groupId>org.richfaces.ui</groupId>
             <artifactId>richfaces-components-ui</artifactId>
-        </dependency>     
+        </dependency>                
 	</dependencies>
 </project>

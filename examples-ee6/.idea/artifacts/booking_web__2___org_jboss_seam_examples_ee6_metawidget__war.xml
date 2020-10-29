@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="booking-web (2) (org.jboss.seam.examples-ee6.metawidget):war">
+    <output-path>$PROJECT_DIR$/metawidget/booking/booking-web/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>booking-web (2) (org.jboss.seam.examples-ee6.metawidget)</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="booking-web.war">
+      <element id="artifact" artifact-name="booking-web (2) (org.jboss.seam.examples-ee6.metawidget):war exploded" />
+    </root>
+  </artifact>
+</component>

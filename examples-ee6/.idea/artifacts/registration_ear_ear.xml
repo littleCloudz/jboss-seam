@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="ear" name="registration-ear:ear">
+    <output-path>$PROJECT_DIR$/registration/registration-ear/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>registration-ear</module>
+        <packaging>ear</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="seam-registration.ear">
+      <element id="artifact" artifact-name="registration-ear:ear exploded" />
+    </root>
+  </artifact>
+</component>

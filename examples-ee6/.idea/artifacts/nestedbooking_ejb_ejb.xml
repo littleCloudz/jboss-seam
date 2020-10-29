@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="ejb-jar" name="nestedbooking-ejb:ejb">
+    <output-path>$PROJECT_DIR$/nestedbooking/nestedbooking-ejb/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>nestedbooking-ejb</module>
+        <packaging>ejb</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="nestedbooking-ejb-2.3.0.CR1.jar">
+      <element id="artifact" artifact-name="nestedbooking-ejb:ejb exploded" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="ear" name="nestedbooking-ear:ear">
+    <output-path>$PROJECT_DIR$/nestedbooking/nestedbooking-ear/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>nestedbooking-ear</module>
+        <packaging>ear</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="seam-nestedbooking.ear">
+      <element id="artifact" artifact-name="nestedbooking-ear:ear exploded" />
+    </root>
+  </artifact>
+</component>

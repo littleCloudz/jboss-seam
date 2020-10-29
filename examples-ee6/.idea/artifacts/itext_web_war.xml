@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="itext-web:war">
+    <output-path>$PROJECT_DIR$/itext/itext-web/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>itext-web</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="itext-web-2.3.0.CR1.war">
+      <element id="artifact" artifact-name="itext-web:war exploded" />
+    </root>
+  </artifact>
+</component>

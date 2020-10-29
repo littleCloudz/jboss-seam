@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="ejb-jar" name="todo-ejb:ejb">
+    <output-path>$PROJECT_DIR$/todo/todo-ejb/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>todo-ejb</module>
+        <packaging>ejb</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="todo-ejb-2.3.0.CR1.jar">
+      <element id="artifact" artifact-name="todo-ejb:ejb exploded" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="ear" name="openid-ear:ear">
+    <output-path>$PROJECT_DIR$/openid/openid-ear/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>openid-ear</module>
+        <packaging>ear</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="seam-openid.ear">
+      <element id="artifact" artifact-name="openid-ear:ear exploded" />
+    </root>
+  </artifact>
+</component>

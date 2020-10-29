@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.infinispan:infinispan-tree:5.1.3.FINAL">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/infinispan/infinispan-tree/5.1.3.FINAL/infinispan-tree-5.1.3.FINAL.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/infinispan/infinispan-tree/5.1.3.FINAL/infinispan-tree-5.1.3.FINAL-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/infinispan/infinispan-tree/5.1.3.FINAL/infinispan-tree-5.1.3.FINAL-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

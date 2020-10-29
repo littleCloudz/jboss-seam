@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="ejb-jar" name="dvdstore-ejb:ejb">
+    <output-path>$PROJECT_DIR$/dvdstore/dvdstore-ejb/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>dvdstore-ejb</module>
+        <packaging>ejb</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="dvdstore-ejb-2.3.0.CR1.jar">
+      <element id="artifact" artifact-name="dvdstore-ejb:ejb exploded" />
+    </root>
+  </artifact>
+</component>

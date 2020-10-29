@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="ear" name="booking-ear (2) (org.jboss.seam.examples-ee6.metawidget):ear">
+    <output-path>$PROJECT_DIR$/metawidget/booking/booking-ear/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>booking-ear (2) (org.jboss.seam.examples-ee6.metawidget)</module>
+        <packaging>ear</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="seam-metawidget-booking.ear">
+      <element id="artifact" artifact-name="booking-ear (2) (org.jboss.seam.examples-ee6.metawidget):ear exploded" />
+    </root>
+  </artifact>
+</component>

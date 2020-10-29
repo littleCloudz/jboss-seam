@@ -11,7 +11,6 @@ import javax.annotation.PreDestroy;
 import javax.ejb.PostActivate;
 import javax.ejb.PrePassivate;
 import javax.interceptor.AroundInvoke;
-import javax.interceptor.AroundTimeout;
 import javax.interceptor.InvocationContext;
 
 import org.jboss.seam.log.LogProvider;
@@ -49,12 +48,6 @@ public class SessionBeanInterceptor extends RootInterceptor
    public Object aroundInvoke(InvocationContext invocation) throws Exception
    {
       return invoke( new EJBInvocationContext(invocation), EventType.AROUND_INVOKE);
-   }
-   
-   @AroundTimeout
-   public Object aroundTimeout(InvocationContext invocation) throws Exception
-   {
-      return invoke( new EJBInvocationContext(invocation), EventType.AROUND_TIMEOUT);
    }
    
    @PrePassivate

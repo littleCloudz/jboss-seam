@@ -5,6 +5,7 @@
 
    <id>dist</id>
    <formats>
+<!--        <format>dir</format> -->
        <format>zip</format>
        <format>tar.gz</format>
    </formats>
@@ -14,7 +15,7 @@
    <fileSets>
       <!-- Examples only -->
       <fileSet>
-        <directory>../examples</directory>
+        <directory>../examples-ee6</directory>
         <outputDirectory>./examples</outputDirectory>
         <useDefaultExcludes>true</useDefaultExcludes>
         <excludes>
@@ -39,6 +40,7 @@
             <include>seam21migration.txt</include>
             <include>seam23migration.txt</include>
             <include>seam2migration.txt</include>
+            <include>clustering-howto.txt</include>
             <include>seam</include>
             <include>seam.bat</include>
          </includes>         
@@ -88,7 +90,6 @@
         <includes>
             <include>*.xml</include>
             <include>lib/*</include>
-            <include>build.properties</include>
         </includes>
       </fileSet>      
    </fileSets>    
@@ -102,7 +103,11 @@
          <useStrictFiltering>true</useStrictFiltering>
          <includes>
             <include>org.jboss.seam:*:*:sources</include>
-         </includes>     
+         </includes>
+         <excludes>
+            <exclude>org.jboss.seam:jboss-seam-gen:*:sources</exclude>
+            <exclude>org.jboss.seam:jboss-seam-jul:*:sources</exclude>
+         </excludes>
          <outputFileNameMapping>${artifact.artifactId}-sources.${artifact.extension}</outputFileNameMapping>
       </dependencySet>
       
@@ -114,7 +119,6 @@
          <includes>
             <include>org.jboss.seam:jboss-seam:ejb</include>
             <include>org.jboss.seam:jboss-seam-debug:jar</include>
-            <include>org.jboss.seam:jboss-seam-gen:jar</include>
             <include>org.jboss.seam:jboss-seam-ui:jar</include>
             <include>org.jboss.seam:jboss-seam-excel:jar</include>
             <include>org.jboss.seam:jboss-seam-pdf:jar</include>
@@ -135,9 +139,35 @@
          <outputFileNameMapping>${artifact.artifactId}${dashClassifier?}.${artifact.extension}</outputFileNameMapping>
       </dependencySet>
       
+      <!-- Seam jul -->
+      <dependencySet>
+         <outputDirectory>lib/interop</outputDirectory>
+         <useProjectArtifact>false</useProjectArtifact>
+         <useStrictFiltering>true</useStrictFiltering>
+         <includes>
+            <include>org.jboss.seam:jboss-seam-jul:jar</include>
+         </includes>
+         <excludes>
+            <exclude>org.jboss.seam:jboss-seam-jul:jar:sources</exclude>
+         </excludes>
+         <outputFileNameMapping>${artifact.artifactId}.${artifact.extension}</outputFileNameMapping>
+      </dependencySet>
+      
+      <!-- Seam jul sources -->
+      <dependencySet>
+         <outputDirectory>lib/interop/src</outputDirectory>
+         <useProjectArtifact>false</useProjectArtifact>
+         <useStrictFiltering>true</useStrictFiltering>
+         <includes>
+            <include>org.jboss.seam:jboss-seam-jul:jar:sources</include>
+         </includes>
+         <outputFileNameMapping>${artifact.artifactId}-sources.${artifact.extension}</outputFileNameMapping>
+      </dependencySet>
+
       <!-- Add Richfaces for Seam-gen -->
       <dependencySet>
          <outputDirectory>lib</outputDirectory>
+         <useProjectArtifact>false</useProjectArtifact>                  
          <includes>
             <include>org.richfaces.core:richfaces-core-api</include>
             <include>org.richfaces.core:richfaces-core-impl</include>
@@ -145,10 +175,44 @@
             <include>org.richfaces.ui:richfaces-components-ui</include>  
             <include>net.sourceforge.cssparser:cssparser</include>
             <include>org.w3c.css:sac</include>
-            <include>com.google.guava:guava</include>
          </includes>         
          <outputFileNameMapping>${artifact.artifactId}${dashClassifier?}.${artifact.extension}</outputFileNameMapping>
       </dependencySet>      
+          
+	  <!-- Seam gen -->
+      <dependencySet>
+         <outputDirectory>lib/gen</outputDirectory>
+         <useProjectArtifact>false</useProjectArtifact>
+         <useStrictFiltering>true</useStrictFiltering>
+         <useTransitiveDependencies>true</useTransitiveDependencies>
+         <includes>
+            <include>org.jboss.seam:jboss-seam-gen:jar</include>
+            <include>org.hibernate:hibernate-tools:jar</include>
+            <include>org.beanshell:bsh:jar</include>
+            <include>org.hibernate:jtidy:jar</include>
+            <include>freemarker:freemarker:jar</include>
+            <include>org.eclipse.jdt:core:jar</include>
+            <include>org.eclipse.core:runtime:jar</include>
+            <include>org.eclipse.equinox:common:jar</include>
+            <include>org.eclipse:text:jar</include>
+            <include>org.apache.ant:ant:jar</include>
+            <include>org.apache.ant:ant-launcher:jar</include>
+            <include>org.apache.ant:ant-nodeps:jar</include>
+         </includes>
+         <excludes>
+            <exclude>org.jboss.seam:jboss-seam-gen:jar:sources</exclude>
+         </excludes>
+         <outputFileNameMapping>${artifact.artifactId}.${artifact.extension}</outputFileNameMapping>
+      </dependencySet>
+      
+      <dependencySet>
+         <outputDirectory>lib/gen/src</outputDirectory>
+         <useProjectArtifact>false</useProjectArtifact>
+         <includes>
+            <include>org.jboss.seam:jboss-seam-gen:*:sources</include>
+         </includes>
+         <outputFileNameMapping>${artifact.artifactId}-${artifact.classifier}.${artifact.extension}</outputFileNameMapping>
+      </dependencySet>
       
       <dependencySet>
          <outputDirectory>./seam-gen</outputDirectory>

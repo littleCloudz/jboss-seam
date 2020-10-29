@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="ear" name="guice-ear:ear">
+    <output-path>$PROJECT_DIR$/guice/guice-ear/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>guice-ear</module>
+        <packaging>ear</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="seam-guice.ear">
+      <element id="artifact" artifact-name="guice-ear:ear exploded" />
+    </root>
+  </artifact>
+</component>

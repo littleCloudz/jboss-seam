@@ -4,7 +4,7 @@
 	<parent>
 		<artifactId>jboss-seam-parent</artifactId>
 		<groupId>org.jboss.seam</groupId>
-		<version>2.3.2-SNAPSHOT</version>
+		<version>2.3.0.CR1</version>
 		<relativePath>../pom.xml</relativePath>
 	</parent>
 
@@ -138,6 +138,12 @@
 		<dependency>
 			<groupId>org.jboss.seam</groupId>
 			<artifactId>jboss-seam-ui</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>org.jboss.seam</groupId>
+					<artifactId>jboss-seam-jul</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 	
 		<dependency>
@@ -162,6 +168,14 @@
 			<groupId>net.sourceforge.htmlunit</groupId>
 			<artifactId>htmlunit</artifactId>
 			<version>2.9</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- Override for HtmlUnit -->
+		<dependency>
+			<groupId>commons-lang</groupId>
+			<artifactId>commons-lang</artifactId>
+			<version>2.6</version>
 			<scope>test</scope>
 		</dependency>
 
@@ -211,6 +225,7 @@
 										<directory>${basedir}/../jboss-seam-flex/src/main/java</directory>
 										<directory>${basedir}/../jboss-seam-gen/src/main/java</directory>
 										<directory>${basedir}/../jboss-seam-ioc/src/main/java</directory>
+										<directory>${basedir}/../jboss-seam-jul/src/main/java</directory>
 										<directory>${basedir}/../jboss-seam-mail/src/main/java</directory>
 										<directory>${basedir}/../jboss-seam-pdf/src/main/java</directory>
 										<directory>${basedir}/../jboss-seam-remoting/src/main/java</directory>
@@ -258,7 +273,6 @@
 									<systemProperties>
 										<!-- used by the jbossas-managed-7 profile in arquillian.xml for the jbossHome property-->
 										<version.jbossas7>${version.jbossas7}</version.jbossas7>
-										<jacoco.agent>${jacoco.agent}</jacoco.agent>
 									</systemProperties>
 								</configuration>
 							</execution>
@@ -293,6 +307,34 @@
 					<directory>src/test/resources-jbossas-7</directory>
 				</testResource>
 				</testResources>
+
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-dependency-plugin</artifactId>
+						<executions>
+							<execution>
+								<id>unpack-as7</id>
+								<phase>process-test-classes</phase>
+								<goals>
+									<goal>unpack</goal>
+								</goals>
+								<configuration>
+									<artifactItems>
+										<artifactItem>
+											<groupId>org.jboss.as</groupId>
+											<artifactId>jboss-as-dist</artifactId>
+											<version>${version.jbossas7}</version>
+											<type>zip</type>
+											<overWrite>false</overWrite>
+											<outputDirectory>${project.build.directory}</outputDirectory>
+										</artifactItem>
+									</artifactItems>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
 			</build>
 		</profile>
 
@@ -365,36 +407,5 @@
                 </plugins>
             </build>
         </profile>		
-
-        <profile>
-            <id>jacoco</id>
-            <activation>
-                <activeByDefault>false</activeByDefault>
-                <property>
-                    <name>jacoco</name>
-                </property>
-            </activation>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.jacoco</groupId>
-                        <artifactId>jacoco-maven-plugin</artifactId>
-                        <configuration>
-                            <excludes>
-                                <exclude>org.jboss.seam.test.*</exclude>
-                            </excludes>
-                            <propertyName>jacoco.agent</propertyName>
-                        </configuration>
-                        <executions>
-                            <execution>
-                                <goals>
-                                    <goal>prepare-agent</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
 	</profiles>
 </project>

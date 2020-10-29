@@ -1,7 +1,7 @@
 
 JBoss Seam - Contextual Component framework for Java EE
 =========================================================
-version 2.3.1.Final, July 2013
+version 2.3.0.CR1, September 2012
 
 This software is distributed under the terms of the FSF Lesser Gnu
 Public License (see lgpl.txt). 
@@ -13,7 +13,7 @@ Get Up And Running Quick
 
 2. Start JBoss AS by typing "bin/standalone.sh" in the JBoss home directory
 
-3. In the "examples/booking" directory, type "mvn clean package" and check 
+3. In the "examples-ee6/booking" directory, type "mvn clean package" and check 
    for any error messages.
 
 4. In the booking-ear directory run:

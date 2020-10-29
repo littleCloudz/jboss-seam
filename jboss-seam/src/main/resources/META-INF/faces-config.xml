@@ -6,7 +6,6 @@
 
    <factory>
       <application-factory>org.jboss.seam.jsf.SeamApplicationFactory</application-factory>
-      <exception-handler-factory>javax.faces.webapp.PreJsf2ExceptionHandlerFactory</exception-handler-factory>
    </factory>
 
    <application>
@@ -24,5 +23,4 @@
    <lifecycle>
        <phase-listener>org.jboss.seam.document.DocumentStorePhaseListener</phase-listener>
    </lifecycle>    
-
 </faces-config>

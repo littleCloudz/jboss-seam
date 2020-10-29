@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="ejb-jar" name="rss-ejb:ejb">
+    <output-path>$PROJECT_DIR$/rss/rss-ejb/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>rss-ejb</module>
+        <packaging>ejb</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="rss-ejb-2.3.0.CR1.jar">
+      <element id="artifact" artifact-name="rss-ejb:ejb exploded" />
+    </root>
+  </artifact>
+</component>

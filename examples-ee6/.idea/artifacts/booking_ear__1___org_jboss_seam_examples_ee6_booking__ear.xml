@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="ear" name="booking-ear (1) (org.jboss.seam.examples-ee6.booking):ear">
+    <output-path>$PROJECT_DIR$/booking/booking-ear/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>booking-ear (1) (org.jboss.seam.examples-ee6.booking)</module>
+        <packaging>ear</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="seam-booking.ear">
+      <element id="artifact" artifact-name="booking-ear (1) (org.jboss.seam.examples-ee6.booking):ear exploded" />
+    </root>
+  </artifact>
+</component>

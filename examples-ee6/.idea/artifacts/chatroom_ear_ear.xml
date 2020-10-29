@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="ear" name="chatroom-ear:ear">
+    <output-path>$PROJECT_DIR$/remoting/chatroom/chatroom-ear/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>chatroom-ear</module>
+        <packaging>ear</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="seam-chatroom.ear">
+      <element id="artifact" artifact-name="chatroom-ear:ear exploded" />
+    </root>
+  </artifact>
+</component>

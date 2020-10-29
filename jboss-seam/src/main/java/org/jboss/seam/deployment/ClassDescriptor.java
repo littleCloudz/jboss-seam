@@ -36,7 +36,7 @@ public class ClassDescriptor extends FileDescriptor
       {
          log.debug("could not load class: " + classname, cnfe);
       }
-      catch (LinkageError ncdfe) 
+      catch (NoClassDefFoundError ncdfe) 
       {
          log.debug("could not load class (missing dependency): " + classname, ncdfe);
       }

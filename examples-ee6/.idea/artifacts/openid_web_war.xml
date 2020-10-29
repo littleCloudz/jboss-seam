@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="openid-web:war">
+    <output-path>$PROJECT_DIR$/openid/openid-web/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>openid-web</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="openid-web-2.3.0.CR1.war">
+      <element id="artifact" artifact-name="openid-web:war exploded" />
+    </root>
+  </artifact>
+</component>

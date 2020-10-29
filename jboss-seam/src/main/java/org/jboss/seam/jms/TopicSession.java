@@ -25,7 +25,7 @@ import org.jboss.seam.annotations.intercept.BypassInterceptors;
 @Scope(ScopeType.EVENT)
 @BypassInterceptors
 @Name("org.jboss.seam.jms.topicSession")
-@Install(precedence=BUILT_IN, genericDependencies=ManagedTopicPublisher.class, dependencies = "org.jboss.seam.jms.topicConnection")
+@Install(precedence=BUILT_IN, genericDependencies=ManagedTopicPublisher.class)
 public class TopicSession
 {
    

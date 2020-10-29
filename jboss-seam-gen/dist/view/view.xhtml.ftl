@@ -56,7 +56,7 @@
 <#assign parentName = parentPojo.shortName?uncap_first>
 
     <rich:tab>
-        <f:facet name="header">
+        <f:facet name="label">
             <h:panelGroup><h:graphicImage value="/img/manytoone.gif" style="vertical-align: middle; padding-right: 4px;"/>${label(property.name)}</h:panelGroup>
         </f:facet>
     <div class="association" id="${property.name}Parent">
@@ -126,7 +126,7 @@
 <#if c2h.isOneToManyCollection(property)>
 
     <rich:tab>
-        <f:facet name="header">
+        <f:facet name="label">
             <h:panelGroup><h:graphicImage value="/img/onetomany.gif" style="vertical-align: middle; padding-right: 4px;"/>${label(property.name)}</h:panelGroup>
         </f:facet>
     <h:form styleClass="association" id="${property.name}Children">

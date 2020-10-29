@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="ejb-jar" name="tasks-ejb:ejb">
+    <output-path>$PROJECT_DIR$/tasks/tasks-ejb/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>tasks-ejb</module>
+        <packaging>ejb</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="tasks-ejb-2.3.0.CR1.jar">
+      <element id="artifact" artifact-name="tasks-ejb:ejb exploded" />
+    </root>
+  </artifact>
+</component>

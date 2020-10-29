@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="ejb-jar" name="helloworld-ejb:ejb">
+    <output-path>$PROJECT_DIR$/remoting/helloworld/helloworld-ejb/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>helloworld-ejb</module>
+        <packaging>ejb</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="helloworld-ejb-2.3.0.CR1.jar">
+      <element id="artifact" artifact-name="helloworld-ejb:ejb exploded" />
+    </root>
+  </artifact>
+</component>

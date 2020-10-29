@@ -2,7 +2,6 @@ package org.jboss.seam.ui.component;
 
 import static org.jboss.seam.util.Strings.emptyIfNull;
 
-import java.io.IOException;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -11,26 +10,26 @@ import java.util.List;
 import javax.el.ValueExpression;
 import javax.faces.FacesException;
 import javax.faces.component.ValueHolder;
-import javax.faces.context.FacesContext;
 import javax.faces.convert.Converter;
 import javax.faces.model.DataModel;
 
 import org.jboss.seam.framework.Query;
 import org.jboss.seam.ui.converter.ConverterChain;
 import org.jboss.seam.ui.converter.NoSelectionConverter;
-import org.richfaces.cdk.annotations.*;
+import org.richfaces.cdk.annotations.Attribute;
+import org.richfaces.cdk.annotations.Description;
+import org.richfaces.cdk.annotations.JsfComponent;
+import org.richfaces.cdk.annotations.Tag;
 
 
 /**
- * JSF Component which creates a List<SelectItem> from a List, Set, DataModel or Array.
- * 
- * @author Pete Muir
+ * @auth Pete Muir
  *
  */
 @JsfComponent(description=@Description(displayName="org.jboss.seam.ui.SelectItems",value="Creates a List<SelectItem> from a List, Set, DataModel or Array."),
 family="javax.faces.SelectItems", type="org.jboss.seam.ui.SelectItems",generate="org.jboss.seam.ui.component.html.HtmlSelectItems", 
 tag = @Tag(baseClass="org.jboss.seam.ui.util.cdk.UIComponentTagBase", name="selectItems"), 
-attributes = {"base-props.xml", "javax.faces.component.UICommand.xml", "javax.faces.component.UIComponent.xml" })
+attributes = {"selectItems.xml" })
 public abstract class UISelectItems extends javax.faces.component.UISelectItems {
    
    private List<javax.faces.model.SelectItem> selectItems;
@@ -88,8 +87,8 @@ public abstract class UISelectItems extends javax.faces.component.UISelectItems 
       
       protected abstract Object getSelectItemValue();
       protected abstract String getSelectItemLabel();
-      protected abstract boolean getSelectItemDisabled();
-      protected abstract boolean getSelectItemEscape();
+      protected abstract Boolean getSelectItemDisabled();
+      protected abstract Boolean getSelectItemEscape();
 
       protected javax.faces.model.SelectItem create()
       {
@@ -110,9 +109,7 @@ public abstract class UISelectItems extends javax.faces.component.UISelectItems 
    /* Kinder impl of get/setLabel */
    
    private String label;
-
-   @Attribute(aliases = {@Alias("itemLabel")},
-           description = @Description("the label to be used when rendering the SelectItem. Can reference the var variable"))
+   
    public String getLabel()
    {
       ValueExpression ve = getValueExpression("label");
@@ -133,66 +130,37 @@ public abstract class UISelectItems extends javax.faces.component.UISelectItems 
    }
 
 
-   public abstract void setHideNoSelectionLabel(boolean hideNoSelectionLabel);
+   public abstract void setHideNoSelectionLabel(Boolean hideNoSelectionLabel);
 
-   @Attribute(defaultValue = "false",
-           description = @Description("if true, the noSelectionLabel will be hidden when a value is selected"))
-   public abstract boolean isHideNoSelectionLabel();
+   @Attribute
+   public abstract Boolean isHideNoSelectionLabel();
 
-   @Attribute(description = @Description("specifies the (optional) label to place at the top of list " +
-           "(if required=\"true\" is also specified then selecting this value will cause a validation error)"))
+   @Attribute
    public abstract String getNoSelectionLabel();
    
    public abstract void setNoSelectionLabel(String noSelectionLabel);
    
-   @Attribute(description = @Description("defines the name of the local variable that holds the current object during iteration"))
+   @Attribute
    public abstract String getVar();
    
    public abstract void setVar(String var);
       
-   @Attribute(aliases = {@Alias("itemDisabled")},
-           description = @Description("if true the SelectItem will be rendered disabled. Can reference the var variable"))
-   public abstract boolean isDisabled();
+   @Attribute
+   public abstract Boolean isDisabled();
    
-   public abstract void setDisabled(boolean disabled);
+   public abstract void setDisabled(Boolean disabled);
    
-   @Attribute(defaultValue = "true", description = @Description("if false, characters in the label will not be escaped. " +
-           "Beware that this is a safety issue when the label is in any way derived from input supplied by the application's user. . Can reference the var variable"))
-   public abstract boolean isEscape();
+   @Attribute
+   public abstract Boolean isEscape();
 
-   public abstract void setEscape(boolean escape);
+   public abstract void setEscape(Boolean escape);
 
-   @Attribute(description = @Description("Value to return to the server if this option is selected. " +
-           "Optional, by default the var object is used. Can reference the var variable"))
+   @Attribute
    public abstract Object getItemValue();
    
    public abstract void setItemValue(Object itemValue);
 
    @Override
-   public void decode(FacesContext context) {
-      super.decode(context);
-      addConverterChainIfRequired();
-   }
-   
-   @Override
-   public void encodeEnd(FacesContext context) throws IOException {
-      super.encodeEnd(context);
-      addConverterChainIfRequired();
-   }
-   
-   private void addConverterChainIfRequired() {
-      if(isShowNoSelectionLabel()){
-         ConverterChain converterChain = new ConverterChain(this.getParent());
-         Converter noSelectionConverter = new NoSelectionConverter();
-         // Make sure that the converter is only added once
-         if (!converterChain.containsConverterType(noSelectionConverter)) {
-             converterChain.addConverterToChain(noSelectionConverter, ConverterChain.CHAIN_START);
-         }
-      }
-   }
-   
-   @Override
-   @Attribute(description = @Description("an EL expression specifying the data that backs the List&lt;SelectItem&gt;"))
    public Object getValue()
    {
       List<javax.faces.model.SelectItem> temporarySelectItems = new ArrayList<javax.faces.model.SelectItem>();
@@ -241,14 +209,14 @@ public abstract class UISelectItems extends javax.faces.component.UISelectItems 
          {
 
             @Override
-            protected boolean getSelectItemDisabled()
+            protected Boolean getSelectItemDisabled()
             {
                Boolean disabled = isDisabled();
                return disabled == null ? false : disabled;
             }
 
             @Override
-            protected boolean getSelectItemEscape()
+            protected Boolean getSelectItemEscape()
             {
                Boolean escape = isEscape();
                return escape == null ? true : escape;
@@ -279,6 +247,12 @@ public abstract class UISelectItems extends javax.faces.component.UISelectItems 
       if (isShowNoSelectionLabel())
       {
          NullableSelectItem s = new NullableSelectItem(NO_SELECTION_VALUE, getNoSelectionLabel());
+         ConverterChain converterChain = new ConverterChain(this.getParent());
+         Converter noSelectionConverter = new NoSelectionConverter();
+         // Make sure that the converter is only added once
+         if (!converterChain.containsConverterType(noSelectionConverter)) {
+            converterChain.addConverterToChain(noSelectionConverter, ConverterChain.CHAIN_START);
+         }
          return s;
       }
       else
@@ -291,7 +265,7 @@ public abstract class UISelectItems extends javax.faces.component.UISelectItems 
    {  
       ValueExpression vb = getValueExpression("noSelectionLabel");
       String noSelectionLabel = getNoSelectionLabel();
-      boolean hideNoSelectionLabel = isHideNoSelectionLabel();
+      Boolean hideNoSelectionLabel = isHideNoSelectionLabel();
       Object parentValue = getParentValue();
       
       /*
@@ -353,4 +327,5 @@ public abstract class UISelectItems extends javax.faces.component.UISelectItems 
          return Arrays.asList((Object[]) array);
       }
    }
+	
 }

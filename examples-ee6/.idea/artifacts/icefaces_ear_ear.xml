@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="ear" name="icefaces-ear:ear">
+    <output-path>$PROJECT_DIR$/icefaces/icefaces-ear/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>icefaces-ear</module>
+        <packaging>ear</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="seam-icefaces.ear">
+      <element id="artifact" artifact-name="icefaces-ear:ear exploded" />
+    </root>
+  </artifact>
+</component>

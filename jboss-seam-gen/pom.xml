@@ -7,7 +7,7 @@
    <parent>
       <groupId>org.jboss.seam</groupId>
       <artifactId>jboss-seam-parent</artifactId>
-      <version>2.3.2-SNAPSHOT</version>
+      <version>2.3.0.CR1</version>
       <relativePath>../pom.xml</relativePath>
    </parent>
 
@@ -31,80 +31,16 @@
    				</execution>
    			</executions>
    		</plugin>
-   		<plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-antrun-plugin</artifactId>
-        <executions>
-          <execution>
-            <id>generate build.properties</id>
-            <phase>generate-sources</phase>
-            <configuration>
-              <target>
-                <echo file="${project.basedir}/../build/build.properties">
-                  complete.version=${project.version}${line.separator}version=${project.short.version}
-                </echo>
-              </target>
-            </configuration>
-            <goals>
-              <goal>run</goal>
-            </goals>
-          </execution>
-          <execution>
-            <id>clean build.properties</id>
-            <phase>clean</phase>
-            <configuration>
-              <target>
-                <delete file="${project.basedir}/../build/build.properties" />
-              </target>
-            </configuration>
-            <goals>
-              <goal>run</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
+   		
    	</plugins>
    </build>
-   
-   <properties>
-     <hibernateversion>4.0.0.Final</hibernateversion>
-   </properties>
-       
    <dependencies>
 
       <!-- version runtime dependencies are managed only here instead in parent -->
       <dependency>
          <groupId>org.hibernate</groupId>
          <artifactId>hibernate-tools</artifactId>
-         <version>4.0.0-CR1</version>
-         <scope>runtime</scope>
-      </dependency>
-      
-      <dependency>
-         <groupId>org.hibernate</groupId>
-         <artifactId>hibernate-core</artifactId>
-         <version>${hibernateversion}</version>
-         <scope>runtime</scope>
-      </dependency>
-      
-      <dependency>
-         <groupId>org.hibernate</groupId>
-         <artifactId>hibernate-entitymanager</artifactId>
-         <version>${hibernateversion}</version>
-         <scope>runtime</scope>
-      </dependency>
-      
-      <dependency>
-         <groupId>org.hibernate.javax.persistence</groupId>
-         <artifactId>hibernate-jpa-2.0-api</artifactId>
-         <version>1.0.0.Final</version>
-         <scope>runtime</scope>
-      </dependency>
-      
-      <dependency>
-         <groupId>commons-logging</groupId>
-         <artifactId>commons-logging</artifactId>
-         <version>1.1</version>
+         <version>4.0.0-SNAPSHOT</version>
          <scope>runtime</scope>
       </dependency>
 
@@ -201,6 +137,8 @@
         <scope>runtime</scope>
       </dependency>
    </dependencies>
+   <modules>
+   </modules>
 
     <profiles>
         <profile>

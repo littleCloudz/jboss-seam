@@ -4,24 +4,16 @@ import javax.faces.component.EditableValueHolder;
 import javax.faces.component.UIComponent;
 import javax.faces.component.html.HtmlOutputLabel;
 
-import org.richfaces.cdk.annotations.Attribute;
 import org.richfaces.cdk.annotations.Description;
 import org.richfaces.cdk.annotations.JsfComponent;
 import org.richfaces.cdk.annotations.Tag;
 
-/**
- * JSF Component which renders a label associated with the nearest JSF input component
- * 
- * @author mnovotny
- *
- */
-@JsfComponent(description=@Description(displayName="org.jboss.seam.ui.Label",value="A label associated with the nearest JSF input component."),
+@JsfComponent(description=@Description(displayName="org.jboss.seam.ui.Label",value="A label associated with the nearest JSF input component"),
 family="javax.faces.Output", type="org.jboss.seam.ui.Label",generate="org.jboss.seam.ui.component.html.HtmlLabel", 
 tag = @Tag(baseClass="org.jboss.seam.ui.util.cdk.UIComponentTagBase", name="label"), 
-attributes = {"javax.faces.component.UIOutput.xml", "core-props.xml","accesskey-props.xml", "focus-props.xml" })
-public abstract class UILabel extends HtmlOutputLabel implements UIDecorateAware
+attributes = {"label.xml" })
+public abstract class UILabel extends HtmlOutputLabel
 {
-   protected UIDecorate decorate;
 
    /**
     * A depth-first search for an EditableValueHolder
@@ -76,17 +68,9 @@ public abstract class UILabel extends HtmlOutputLabel implements UIDecorateAware
    }
 
    @Override
-   @Attribute(description = @Description("Id of input component this label is for"))
    public String getFor()
    {
-      if(decorate != null) {
-         return getFor(decorate);
-      }
       return getFor(this);
    }
 
-   @Override
-   public void setUIDecorate(UIDecorate decorate) {
-      this.decorate = decorate;
-   }
 }

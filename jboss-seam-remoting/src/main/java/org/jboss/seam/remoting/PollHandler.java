@@ -21,7 +21,6 @@ import org.jboss.seam.remoting.messaging.PollError;
 import org.jboss.seam.remoting.messaging.PollRequest;
 import org.jboss.seam.remoting.wrapper.Wrapper;
 import org.jboss.seam.servlet.ContextualHttpServletRequest;
-import org.jboss.seam.util.XML;
 
 /**
  * Handles JMS Message poll requests.
@@ -57,7 +56,7 @@ public class PollHandler extends BaseRequestHandler implements RequestHandler
     response.setContentType("text/xml");
 
     // Parse the incoming request as XML
-    SAXReader xmlReader = XML.getSafeSaxReader();
+    SAXReader xmlReader = new SAXReader();
     Document doc = xmlReader.read(request.getInputStream());
     Element env = doc.getRootElement();
 

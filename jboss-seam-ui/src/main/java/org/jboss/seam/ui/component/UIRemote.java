@@ -17,11 +17,11 @@ import org.richfaces.cdk.annotations.Tag;
 family="org.jboss.seam.ui.Remote", type="org.jboss.seam.ui.Remote",generate="org.jboss.seam.ui.component.html.HtmlRemote", 
 tag = @Tag(baseClass="org.jboss.seam.ui.util.cdk.UIComponentTagBase", name="remote"), 
 renderer = @JsfRenderer(type="org.jboss.seam.ui.RemoteRenderer", family="org.jboss.seam.ui.RemoteRenderer"),
-attributes = {"javax.faces.component.UIComponent.xml", "core-props.xml" })
+attributes = {"remote.xml" })
 public abstract class UIRemote extends UIComponentBase
 {
    
-   @Attribute(description = @Description("The Seam components to include in the Seam Remoting JS interface stubs"))
+   @Attribute
    public abstract String getInclude();
 
    public abstract void setInclude(String include);

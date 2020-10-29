@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="ejb-jar" name="seampay-ejb:ejb">
+    <output-path>$PROJECT_DIR$/seampay/seampay-ejb/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>seampay-ejb</module>
+        <packaging>ejb</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="seampay-ejb-2.3.0.CR1.jar">
+      <element id="artifact" artifact-name="seampay-ejb:ejb exploded" />
+    </root>
+  </artifact>
+</component>

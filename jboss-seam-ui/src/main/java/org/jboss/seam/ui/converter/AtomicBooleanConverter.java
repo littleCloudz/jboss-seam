@@ -10,7 +10,6 @@ import javax.faces.convert.ConverterException;
 import javax.faces.convert.FacesConverter;
 
 /**
- * Converter for java.util.concurrent.atomic.AtomicBoolean 
  * @author Dennis Byrne
  */
 @FacesConverter(value="org.jboss.seam.ui.AtomicBooleanConverter")

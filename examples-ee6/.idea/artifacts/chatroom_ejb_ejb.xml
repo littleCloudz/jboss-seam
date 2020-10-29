@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="ejb-jar" name="chatroom-ejb:ejb">
+    <output-path>$PROJECT_DIR$/remoting/chatroom/chatroom-ejb/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>chatroom-ejb</module>
+        <packaging>ejb</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="chatroom-ejb-2.3.0.CR1.jar">
+      <element id="artifact" artifact-name="chatroom-ejb:ejb exploded" />
+    </root>
+  </artifact>
+</component>

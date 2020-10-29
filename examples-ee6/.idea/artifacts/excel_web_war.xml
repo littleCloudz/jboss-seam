@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="excel-web:war">
+    <output-path>$PROJECT_DIR$/excel/excel-web/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>excel-web</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="excel-web-2.3.0.CR1.war">
+      <element id="artifact" artifact-name="excel-web:war exploded" />
+    </root>
+  </artifact>
+</component>

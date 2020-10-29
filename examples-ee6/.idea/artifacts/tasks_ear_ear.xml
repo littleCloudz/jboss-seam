@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="ear" name="tasks-ear:ear">
+    <output-path>$PROJECT_DIR$/tasks/tasks-ear/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>tasks-ear</module>
+        <packaging>ear</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="seam-tasks.ear">
+      <element id="artifact" artifact-name="tasks-ear:ear exploded" />
+    </root>
+  </artifact>
+</component>

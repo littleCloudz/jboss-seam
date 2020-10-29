@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="ear" name="contactlist-ear:ear">
+    <output-path>$PROJECT_DIR$/contactlist/contactlist-ear/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>contactlist-ear</module>
+        <packaging>ear</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="seam-contactlist.ear">
+      <element id="artifact" artifact-name="contactlist-ear:ear exploded" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,26 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="todo-web:war exploded">
+    <output-path>$PROJECT_DIR$/todo/todo-web/target/todo-web-2.3.0.CR1</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <exploded>true</exploded>
+        <module>todo-web</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="todo-web" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: org.jboss.seam:jboss-seam-ui:2.3.0.CR1" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/todo/todo-web/target/todo-web-2.3.0.CR1/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="todo-web/web/Web" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="ear" name="excel-ear:ear">
+    <output-path>$PROJECT_DIR$/excel/excel-ear/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>excel-ear</module>
+        <packaging>ear</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="seam-excel.ear">
+      <element id="artifact" artifact-name="excel-ear:ear exploded" />
+    </root>
+  </artifact>
+</component>

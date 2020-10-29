@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="ear" name="todo-ear:ear">
+    <output-path>$PROJECT_DIR$/todo/todo-ear/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>todo-ear</module>
+        <packaging>ear</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="seam-todo.ear">
+      <element id="artifact" artifact-name="todo-ear:ear exploded" />
+    </root>
+  </artifact>
+</component>

@@ -18,6 +18,7 @@
       <module fileurl="file://$PROJECT_DIR$/jboss-seam-ui/jboss-seam-ui.iml" filepath="$PROJECT_DIR$/jboss-seam-ui/jboss-seam-ui.iml" />
       <module fileurl="file://$PROJECT_DIR$/jboss-seam-wicket/jboss-seam-wicket.iml" filepath="$PROJECT_DIR$/jboss-seam-wicket/jboss-seam-wicket.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/jboss-seam2.iml" filepath="$PROJECT_DIR$/.idea/jboss-seam2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/seam-cdk-helper/seam-cdk-helper.iml" filepath="$PROJECT_DIR$/seam-cdk-helper/seam-cdk-helper.iml" />
       <module fileurl="file://$PROJECT_DIR$/seam-integration-tests/seam-integration-tests.iml" filepath="$PROJECT_DIR$/seam-integration-tests/seam-integration-tests.iml" />
     </modules>
   </component>

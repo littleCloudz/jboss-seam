@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="ejb-jar" name="numberguess-ejb:ejb">
+    <output-path>$PROJECT_DIR$/numberguess/numberguess-ejb/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>numberguess-ejb</module>
+        <packaging>ejb</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="numberguess-ejb-2.3.0.CR1.jar">
+      <element id="artifact" artifact-name="numberguess-ejb:ejb exploded" />
+    </root>
+  </artifact>
+</component>

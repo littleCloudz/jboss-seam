@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="ear" name="seampay-ear:ear">
+    <output-path>$PROJECT_DIR$/seampay/seampay-ear/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>seampay-ear</module>
+        <packaging>ear</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="seam-seampay.ear">
+      <element id="artifact" artifact-name="seampay-ear:ear exploded" />
+    </root>
+  </artifact>
+</component>

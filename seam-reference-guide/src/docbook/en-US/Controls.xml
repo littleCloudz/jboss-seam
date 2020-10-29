@@ -834,19 +834,20 @@
       <section>
          <title>Seam Text</title>
          
-             <section>
-                <title><literal>&lt;s:validateFormattedText&gt;</literal></title>
-              
-                <para><emphasis>Description</emphasis></para>
-                <para>
-                   Checks that the submitted value is valid Seam Text
-                </para>
-              
-                <para><emphasis>Attributes</emphasis></para>
-                <para>
-                   None.
-                </para>
-             </section>
+ <!--         <section>
+            <title><literal>&lt;s:validateFormattedText&gt;</literal></title>
+          
+            <para><emphasis>Description</emphasis></para>
+            <para>
+               Checks that the submitted value is valid Seam Text
+            </para>
+          
+            <para><emphasis>Attributes</emphasis></para>
+            <para>
+               None.
+            </para>
+         </section>
+   -->       
          <section>
             <title><literal>&lt;s:formattedText&gt;</literal></title>
 
@@ -1343,21 +1344,6 @@
                      served image will have a generated file name. If you want 
                      to name your file, you should specify it here.  This name 
                      should be unique
-                  </para>
-               </listitem>
-			   <listitem>
-                  <para>
-                     <literal>cache</literal> &#8212; specify if this image should be cached. Boolean value.
-                  </para>
-               </listitem>
-			   <listitem>
-                  <para>
-                     <literal>invalidate</literal> &#8212; specify if this image cache should be invalidated. Boolean value.
-                  </para>
-               </listitem>               
-			   <listitem>
-                  <para>
-                     <literal>cacheKey</literal> &#8212; specify unique string for a cached image.
                   </para>
                </listitem>
             </itemizedlist>

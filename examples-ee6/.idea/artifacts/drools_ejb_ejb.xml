@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="ejb-jar" name="drools-ejb:ejb">
+    <output-path>$PROJECT_DIR$/drools/drools-ejb/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>drools-ejb</module>
+        <packaging>ejb</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="drools-ejb-2.3.0.CR1.jar">
+      <element id="artifact" artifact-name="drools-ejb:ejb exploded" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="rss-web:war">
+    <output-path>$PROJECT_DIR$/rss/rss-web/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>rss-web</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="rss-web-2.3.0.CR1.war">
+      <element id="artifact" artifact-name="rss-web:war exploded" />
+    </root>
+  </artifact>
+</component>

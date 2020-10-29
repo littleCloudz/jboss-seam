@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="ejb-jar" name="itext-ejb:ejb">
+    <output-path>$PROJECT_DIR$/itext/itext-ejb/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>itext-ejb</module>
+        <packaging>ejb</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="itext-ejb-2.3.0.CR1.jar">
+      <element id="artifact" artifact-name="itext-ejb:ejb exploded" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="ear" name="messages-ear:ear">
+    <output-path>$PROJECT_DIR$/messages/messages-ear/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>messages-ear</module>
+        <packaging>ear</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="seam-messages.ear">
+      <element id="artifact" artifact-name="messages-ear:ear exploded" />
+    </root>
+  </artifact>
+</component>

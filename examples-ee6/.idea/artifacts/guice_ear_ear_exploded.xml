@@ -1,0 +1,38 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-ear" name="guice-ear:ear exploded">
+    <output-path>$PROJECT_DIR$/guice/guice-ear/target/seam-guice</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <exploded>true</exploded>
+        <module>guice-ear</module>
+        <packaging>ear</packaging>
+      </options>
+    </properties>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="guice-ear/javaeeApplication/JavaEE" />
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/guice/guice-ear/target/seam-guice/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="dir-copy" path="$PROJECT_DIR$/guice/guice-ear/src/main/application" />
+      <element id="archive" name="guice-web.war">
+        <element id="artifact" artifact-name="guice-web:war exploded" />
+      </element>
+      <element id="archive" name="guice-ejb.jar">
+        <element id="artifact" artifact-name="guice-ejb:ejb exploded" />
+      </element>
+      <element id="directory" name="lib">
+        <element id="library" level="project" name="Maven: org.hibernate:hibernate-validator:4.2.0.Final" />
+        <element id="library" level="project" name="Maven: com.google.code.guice:guice:1.0" />
+        <element id="library" level="project" name="Maven: org.testng:testng:5.14.10" />
+        <element id="library" level="project" name="Maven: org.beanshell:bsh:2.0b4" />
+        <element id="library" level="project" name="Maven: com.beust:jcommander:1.12" />
+        <element id="library" level="project" name="Maven: org.yaml:snakeyaml:1.6" />
+        <element id="library" level="project" name="Maven: junit:junit:4.8.2" />
+        <element id="library" level="project" name="Maven: org.jboss.el:jboss-el:1.0_02.CR6" />
+        <element id="library" level="project" name="Maven: javax.el:el-api:1.0" />
+        <element id="library" level="project" name="Maven: org.jboss.seam:jboss-seam-ioc:2.3.0.CR1" />
+      </element>
+      <element id="file-copy" path="$MAVEN_REPOSITORY$/org/jboss/seam/jboss-seam/2.3.0.CR1/jboss-seam-2.3.0.CR1.jar" output-file-name="jboss-seam.jar" />
+    </root>
+  </artifact>
+</component>

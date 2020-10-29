@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="messages-web:war">
+    <output-path>$PROJECT_DIR$/messages/messages-web/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>messages-web</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="messages-web-2.3.0.CR1.war">
+      <element id="artifact" artifact-name="messages-web:war exploded" />
+    </root>
+  </artifact>
+</component>

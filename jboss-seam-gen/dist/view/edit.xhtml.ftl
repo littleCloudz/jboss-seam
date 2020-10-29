@@ -38,16 +38,12 @@
                           value="Save"
                          action="${'#'}{${homeName}.persist}"
                        disabled="${'#'}{!${homeName}.wired}"
-                       rendered="${'#'}{!${homeName}.managed}">
-                <s:conversationId/>
-            </h:commandButton>
+                       rendered="${'#'}{!${homeName}.managed}"/>
 
             <h:commandButton id="update"
                           value="Save"
                          action="${'#'}{${homeName}.update}"
-                       rendered="${'#'}{${homeName}.managed}">
-                <s:conversationId/>
-            </h:commandButton>
+                       rendered="${'#'}{${homeName}.managed}"/>
 
             <h:commandButton id="delete"
                           value="Delete"
@@ -86,9 +82,9 @@
 <#assign parentName = parentPojo.shortName?uncap_first>
 
 <#if property.optional>
-    <rich:tab header="${label(property.name)}">
+    <rich:tab label="${label(property.name)}">
 <#else>
-    <rich:tab header="${label(property.name)} *" labelClass="required">
+    <rich:tab label="${label(property.name)} *" labelClass="required">
 </#if>
     <div class="association" id="${property.name}Parent">
 
@@ -149,7 +145,7 @@
 </#if>
 <#if c2h.isOneToManyCollection(property)>
 
-    <rich:tab header="${label(property.name)}">
+    <rich:tab label="${label(property.name)}">
         <h:form styleClass="association" id="${property.name}Children">
 
 <#assign childPojo = c2j.getPOJOClass(property.value.element.associatedClass)>

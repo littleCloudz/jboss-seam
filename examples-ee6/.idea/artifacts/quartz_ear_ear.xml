@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="ear" name="quartz-ear:ear">
+    <output-path>$PROJECT_DIR$/quartz/quartz-ear/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>quartz-ear</module>
+        <packaging>ear</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="seam-quartz.ear">
+      <element id="artifact" artifact-name="quartz-ear:ear exploded" />
+    </root>
+  </artifact>
+</component>

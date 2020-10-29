@@ -1,0 +1,19 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-ejb" name="seambay-ejb:ejb exploded">
+    <output-path>$PROJECT_DIR$/seambay/seambay-ejb/target/seambay-ejb-2.3.0.CR1</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <exploded>true</exploded>
+        <module>seambay-ejb</module>
+        <packaging>ejb</packaging>
+      </options>
+    </properties>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="seambay-ejb/ejb/EJB" />
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/seambay/seambay-ejb/target/seambay-ejb-2.3.0.CR1/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="module-output" name="seambay-ejb" />
+    </root>
+  </artifact>
+</component>

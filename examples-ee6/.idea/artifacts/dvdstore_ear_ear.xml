@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="ear" name="dvdstore-ear:ear">
+    <output-path>$PROJECT_DIR$/dvdstore/dvdstore-ear/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>dvdstore-ear</module>
+        <packaging>ear</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="seam-dvdstore.ear">
+      <element id="artifact" artifact-name="dvdstore-ear:ear exploded" />
+    </root>
+  </artifact>
+</component>

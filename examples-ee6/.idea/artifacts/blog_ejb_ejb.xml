@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="ejb-jar" name="blog-ejb:ejb">
+    <output-path>$PROJECT_DIR$/blog/blog-ejb/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>blog-ejb</module>
+        <packaging>ejb</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="blog-ejb-2.3.0.CR1.jar">
+      <element id="artifact" artifact-name="blog-ejb:ejb exploded" />
+    </root>
+  </artifact>
+</component>

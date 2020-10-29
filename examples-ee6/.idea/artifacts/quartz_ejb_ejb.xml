@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="ejb-jar" name="quartz-ejb:ejb">
+    <output-path>$PROJECT_DIR$/quartz/quartz-ejb/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>quartz-ejb</module>
+        <packaging>ejb</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="quartz-ejb-2.3.0.CR1.jar">
+      <element id="artifact" artifact-name="quartz-ejb:ejb exploded" />
+    </root>
+  </artifact>
+</component>

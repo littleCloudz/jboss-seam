@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="ear" name="blog-ear:ear">
+    <output-path>$PROJECT_DIR$/blog/blog-ear/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>blog-ear</module>
+        <packaging>ear</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="seam-blog.ear">
+      <element id="artifact" artifact-name="blog-ear:ear exploded" />
+    </root>
+  </artifact>
+</component>

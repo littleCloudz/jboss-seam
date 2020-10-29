@@ -1,0 +1,32 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-ear" name="booking-ear (2) (org.jboss.seam.examples-ee6.metawidget):ear exploded">
+    <output-path>$PROJECT_DIR$/metawidget/booking/booking-ear/target/seam-metawidget-booking</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <exploded>true</exploded>
+        <module>booking-ear (2) (org.jboss.seam.examples-ee6.metawidget)</module>
+        <packaging>ear</packaging>
+      </options>
+    </properties>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="booking-ear (2) (org.jboss.seam.examples-ee6.metawidget)/javaeeApplication/JavaEE" />
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/metawidget/booking/booking-ear/target/seam-metawidget-booking/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="dir-copy" path="$PROJECT_DIR$/metawidget/booking/booking-ear/src/main/application" />
+      <element id="archive" name="booking-web.war">
+        <element id="artifact" artifact-name="booking-web (2) (org.jboss.seam.examples-ee6.metawidget):war exploded" />
+      </element>
+      <element id="archive" name="booking-ejb.jar">
+        <element id="artifact" artifact-name="booking-ejb (2) (org.jboss.seam.examples-ee6.metawidget):ejb exploded" />
+      </element>
+      <element id="file-copy" path="$MAVEN_REPOSITORY$/org/jboss/seam/jboss-seam/2.3.0.CR1/jboss-seam-2.3.0.CR1.jar" output-file-name="jboss-seam.jar" />
+      <element id="directory" name="lib">
+        <element id="library" level="project" name="Maven: org.jboss.el:jboss-el:1.0_02.CR6" />
+        <element id="library" level="project" name="Maven: org.metawidget.modules:metawidget-annotation:2.3" />
+        <element id="library" level="project" name="Maven: org.metawidget.modules:metawidget-core:2.3" />
+        <element id="library" level="project" name="Maven: org.metawidget.modules.faces:metawidget-facesannotation:2.3" />
+      </element>
+    </root>
+  </artifact>
+</component>

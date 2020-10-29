@@ -15,15 +15,14 @@ import org.richfaces.cdk.annotations.JsfRenderer;
 import org.richfaces.cdk.annotations.Tag;
 
 /**
- * JSF component class which renders a file upload control. 
- * This control must be used within a form with an encoding type of multipart/form-data
+ * JSF component class
  * 
  */
 @JsfComponent(description=@Description(displayName="org.jboss.seam.ui.FileUpload",value="Renders a file upload control. This control must be used within a form with an encoding type of multipart/form-data"),
 family="org.jboss.seam.ui.FileUpload", type="org.jboss.seam.ui.FileUpload",generate="org.jboss.seam.ui.component.html.HtmlFileUpload", 
 tag = @Tag(baseClass="org.jboss.seam.ui.util.cdk.UIComponentTagBase", name="fileUpload"),
 renderer = @JsfRenderer(type="org.jboss.seam.ui.FileUploadRenderer", family="org.jboss.seam.ui.FileUploadRenderer"),
-attributes = {"core-props.xml", "focus-props.xml", "javax.faces.component.EditableValueHolder.xml" })
+attributes = {"fileUpload.xml" })
 public abstract class UIFileUpload extends UIInput
 {
 
@@ -280,21 +279,8 @@ public abstract class UIFileUpload extends UIInput
    
    public abstract void setAccept(String accept);
    
-   @Attribute(description = @Description("a comma-separated list of content types to accept, " +
-           "may not be supported by the browser. E.g. \"images/png,images/jpg\",\"images/*\"."))
+   @Attribute
    public abstract String getAccept();
-
-   @Attribute(description = @Description("this value binding receives the file's content type (optional)."))
-   public abstract Object getData();
-
-   @Attribute(description = @Description("the property to receive the contentType"))
-   public abstract String getContentType();
-
-   @Attribute(description = @Description("this value binding receives the filename (optional)."))
-   public abstract String getFileName();
-
-   @Attribute(description = @Description("this value binding receives the file size (optional)."))
-   public abstract Integer getFileSize();
    
    @Attribute
    public abstract String getStyleClass();

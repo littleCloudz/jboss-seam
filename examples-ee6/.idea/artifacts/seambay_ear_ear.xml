@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="ear" name="seambay-ear:ear">
+    <output-path>$PROJECT_DIR$/seambay/seambay-ear/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>seambay-ear</module>
+        <packaging>ear</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="seam-seambay.ear">
+      <element id="artifact" artifact-name="seambay-ear:ear exploded" />
+    </root>
+  </artifact>
+</component>

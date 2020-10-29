@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="dvdstore-tests:war">
+    <output-path>$PROJECT_DIR$/dvdstore/dvdstore-tests/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>dvdstore-tests</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="seam-dvdstore.war">
+      <element id="artifact" artifact-name="dvdstore-tests:war exploded" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/blog/blog.iml" filepath="$PROJECT_DIR$/blog/blog.iml" />
+      <module fileurl="file://$PROJECT_DIR$/blog/blog-ear/blog-ear.iml" filepath="$PROJECT_DIR$/blog/blog-ear/blog-ear.iml" />
+      <module fileurl="file://$PROJECT_DIR$/blog/blog-ejb/blog-ejb.iml" filepath="$PROJECT_DIR$/blog/blog-ejb/blog-ejb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/blog/blog-tests/blog-tests.iml" filepath="$PROJECT_DIR$/blog/blog-tests/blog-tests.iml" />
+      <module fileurl="file://$PROJECT_DIR$/blog/blog-web/blog-web.iml" filepath="$PROJECT_DIR$/blog/blog-web/blog-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/booking/booking (1) (org.jboss.seam.examples-ee6).iml" filepath="$PROJECT_DIR$/booking/booking (1) (org.jboss.seam.examples-ee6).iml" />
+      <module fileurl="file://$PROJECT_DIR$/metawidget/booking/booking (2) (org.jboss.seam.examples-ee6.metawidget).iml" filepath="$PROJECT_DIR$/metawidget/booking/booking (2) (org.jboss.seam.examples-ee6.metawidget).iml" />
+      <module fileurl="file://$PROJECT_DIR$/booking/booking-ear/booking-ear (1) (org.jboss.seam.examples-ee6.booking).iml" filepath="$PROJECT_DIR$/booking/booking-ear/booking-ear (1) (org.jboss.seam.examples-ee6.booking).iml" />
+      <module fileurl="file://$PROJECT_DIR$/metawidget/booking/booking-ear/booking-ear (2) (org.jboss.seam.examples-ee6.metawidget).iml" filepath="$PROJECT_DIR$/metawidget/booking/booking-ear/booking-ear (2) (org.jboss.seam.examples-ee6.metawidget).iml" />
+      <module fileurl="file://$PROJECT_DIR$/booking/booking-ejb/booking-ejb (1) (org.jboss.seam.examples-ee6.booking).iml" filepath="$PROJECT_DIR$/booking/booking-ejb/booking-ejb (1) (org.jboss.seam.examples-ee6.booking).iml" />
+      <module fileurl="file://$PROJECT_DIR$/metawidget/booking/booking-ejb/booking-ejb (2) (org.jboss.seam.examples-ee6.metawidget).iml" filepath="$PROJECT_DIR$/metawidget/booking/booking-ejb/booking-ejb (2) (org.jboss.seam.examples-ee6.metawidget).iml" />
+      <module fileurl="file://$PROJECT_DIR$/booking/booking-tests/booking-tests (1) (org.jboss.seam.examples-ee6.booking).iml" filepath="$PROJECT_DIR$/booking/booking-tests/booking-tests (1) (org.jboss.seam.examples-ee6.booking).iml" />
+      <module fileurl="file://$PROJECT_DIR$/metawidget/booking/booking-tests/booking-tests (2) (org.jboss.seam.examples-ee6.metawidget).iml" filepath="$PROJECT_DIR$/metawidget/booking/booking-tests/booking-tests (2) (org.jboss.seam.examples-ee6.metawidget).iml" />
+      <module fileurl="file://$PROJECT_DIR$/booking/booking-web/booking-web (1) (org.jboss.seam.examples-ee6.booking).iml" filepath="$PROJECT_DIR$/booking/booking-web/booking-web (1) (org.jboss.seam.examples-ee6.booking).iml" />
+      <module fileurl="file://$PROJECT_DIR$/metawidget/booking/booking-web/booking-web (2) (org.jboss.seam.examples-ee6.metawidget).iml" filepath="$PROJECT_DIR$/metawidget/booking/booking-web/booking-web (2) (org.jboss.seam.examples-ee6.metawidget).iml" />
+      <module fileurl="file://$PROJECT_DIR$/remoting/chatroom/chatroom.iml" filepath="$PROJECT_DIR$/remoting/chatroom/chatroom.iml" />
+      <module fileurl="file://$PROJECT_DIR$/remoting/chatroom/chatroom-ear/chatroom-ear.iml" filepath="$PROJECT_DIR$/remoting/chatroom/chatroom-ear/chatroom-ear.iml" />
+      <module fileurl="file://$PROJECT_DIR$/remoting/chatroom/chatroom-ejb/chatroom-ejb.iml" filepath="$PROJECT_DIR$/remoting/chatroom/chatroom-ejb/chatroom-ejb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/remoting/chatroom/chatroom-tests/chatroom-tests.iml" filepath="$PROJECT_DIR$/remoting/chatroom/chatroom-tests/chatroom-tests.iml" />
+      <module fileurl="file://$PROJECT_DIR$/remoting/chatroom/chatroom-web/chatroom-web.iml" filepath="$PROJECT_DIR$/remoting/chatroom/chatroom-web/chatroom-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/contactlist/contactlist.iml" filepath="$PROJECT_DIR$/contactlist/contactlist.iml" />
+      <module fileurl="file://$PROJECT_DIR$/contactlist/contactlist-ear/contactlist-ear.iml" filepath="$PROJECT_DIR$/contactlist/contactlist-ear/contactlist-ear.iml" />
+      <module fileurl="file://$PROJECT_DIR$/contactlist/contactlist-ejb/contactlist-ejb.iml" filepath="$PROJECT_DIR$/contactlist/contactlist-ejb/contactlist-ejb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/contactlist/contactlist-tests/contactlist-tests.iml" filepath="$PROJECT_DIR$/contactlist/contactlist-tests/contactlist-tests.iml" />
+      <module fileurl="file://$PROJECT_DIR$/contactlist/contactlist-web/contactlist-web.iml" filepath="$PROJECT_DIR$/contactlist/contactlist-web/contactlist-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/drools/drools.iml" filepath="$PROJECT_DIR$/drools/drools.iml" />
+      <module fileurl="file://$PROJECT_DIR$/drools/drools-ear/drools-ear.iml" filepath="$PROJECT_DIR$/drools/drools-ear/drools-ear.iml" />
+      <module fileurl="file://$PROJECT_DIR$/drools/drools-ejb/drools-ejb.iml" filepath="$PROJECT_DIR$/drools/drools-ejb/drools-ejb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/drools/drools-tests/drools-tests.iml" filepath="$PROJECT_DIR$/drools/drools-tests/drools-tests.iml" />
+      <module fileurl="file://$PROJECT_DIR$/drools/drools-web/drools-web.iml" filepath="$PROJECT_DIR$/drools/drools-web/drools-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dvdstore/dvdstore.iml" filepath="$PROJECT_DIR$/dvdstore/dvdstore.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dvdstore/dvdstore-ear/dvdstore-ear.iml" filepath="$PROJECT_DIR$/dvdstore/dvdstore-ear/dvdstore-ear.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dvdstore/dvdstore-ejb/dvdstore-ejb.iml" filepath="$PROJECT_DIR$/dvdstore/dvdstore-ejb/dvdstore-ejb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dvdstore/dvdstore-tests/dvdstore-tests.iml" filepath="$PROJECT_DIR$/dvdstore/dvdstore-tests/dvdstore-tests.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dvdstore/dvdstore-web/dvdstore-web.iml" filepath="$PROJECT_DIR$/dvdstore/dvdstore-web/dvdstore-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/examples-ee6.iml" filepath="$PROJECT_DIR$/examples-ee6.iml" />
+      <module fileurl="file://$PROJECT_DIR$/excel/excel.iml" filepath="$PROJECT_DIR$/excel/excel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/excel/excel-ear/excel-ear.iml" filepath="$PROJECT_DIR$/excel/excel-ear/excel-ear.iml" />
+      <module fileurl="file://$PROJECT_DIR$/excel/excel-ejb/excel-ejb.iml" filepath="$PROJECT_DIR$/excel/excel-ejb/excel-ejb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/excel/excel-tests/excel-tests.iml" filepath="$PROJECT_DIR$/excel/excel-tests/excel-tests.iml" />
+      <module fileurl="file://$PROJECT_DIR$/excel/excel-web/excel-web.iml" filepath="$PROJECT_DIR$/excel/excel-web/excel-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/groovybooking/groovybooking (1) (org.jboss.seam.examples-ee6).iml" filepath="$PROJECT_DIR$/groovybooking/groovybooking (1) (org.jboss.seam.examples-ee6).iml" />
+      <module fileurl="file://$PROJECT_DIR$/metawidget/groovybooking/groovybooking (2) (org.jboss.seam.examples-ee6.metawidget).iml" filepath="$PROJECT_DIR$/metawidget/groovybooking/groovybooking (2) (org.jboss.seam.examples-ee6.metawidget).iml" />
+      <module fileurl="file://$PROJECT_DIR$/groovybooking/groovybooking-tests/groovybooking-tests (1) (org.jboss.seam.examples-ee6.groovybooking).iml" filepath="$PROJECT_DIR$/groovybooking/groovybooking-tests/groovybooking-tests (1) (org.jboss.seam.examples-ee6.groovybooking).iml" />
+      <module fileurl="file://$PROJECT_DIR$/metawidget/groovybooking/groovybooking-tests/groovybooking-tests (2) (org.jboss.seam.examples-ee6.metawidget).iml" filepath="$PROJECT_DIR$/metawidget/groovybooking/groovybooking-tests/groovybooking-tests (2) (org.jboss.seam.examples-ee6.metawidget).iml" />
+      <module fileurl="file://$PROJECT_DIR$/groovybooking/groovybooking-web/groovybooking-web (1) (org.jboss.seam.examples-ee6.groovybooking).iml" filepath="$PROJECT_DIR$/groovybooking/groovybooking-web/groovybooking-web (1) (org.jboss.seam.examples-ee6.groovybooking).iml" />
+      <module fileurl="file://$PROJECT_DIR$/metawidget/groovybooking/groovybooking-web/groovybooking-web (2) (org.jboss.seam.examples-ee6.metawidget).iml" filepath="$PROJECT_DIR$/metawidget/groovybooking/groovybooking-web/groovybooking-web (2) (org.jboss.seam.examples-ee6.metawidget).iml" />
+      <module fileurl="file://$PROJECT_DIR$/guice/guice.iml" filepath="$PROJECT_DIR$/guice/guice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/guice/guice-ear/guice-ear.iml" filepath="$PROJECT_DIR$/guice/guice-ear/guice-ear.iml" />
+      <module fileurl="file://$PROJECT_DIR$/guice/guice-ejb/guice-ejb.iml" filepath="$PROJECT_DIR$/guice/guice-ejb/guice-ejb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/guice/guice-tests/guice-tests.iml" filepath="$PROJECT_DIR$/guice/guice-tests/guice-tests.iml" />
+      <module fileurl="file://$PROJECT_DIR$/guice/guice-web/guice-web.iml" filepath="$PROJECT_DIR$/guice/guice-web/guice-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/remoting/gwt/gwt.iml" filepath="$PROJECT_DIR$/remoting/gwt/gwt.iml" />
+      <module fileurl="file://$PROJECT_DIR$/remoting/gwt/gwt-ear/gwt-ear.iml" filepath="$PROJECT_DIR$/remoting/gwt/gwt-ear/gwt-ear.iml" />
+      <module fileurl="file://$PROJECT_DIR$/remoting/gwt/gwt-ejb/gwt-ejb.iml" filepath="$PROJECT_DIR$/remoting/gwt/gwt-ejb/gwt-ejb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/remoting/gwt/gwt-tests/gwt-tests.iml" filepath="$PROJECT_DIR$/remoting/gwt/gwt-tests/gwt-tests.iml" />
+      <module fileurl="file://$PROJECT_DIR$/remoting/gwt/gwt-web/gwt-web.iml" filepath="$PROJECT_DIR$/remoting/gwt/gwt-web/gwt-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/remoting/helloworld/helloworld.iml" filepath="$PROJECT_DIR$/remoting/helloworld/helloworld.iml" />
+      <module fileurl="file://$PROJECT_DIR$/remoting/helloworld/helloworld-ear/helloworld-ear.iml" filepath="$PROJECT_DIR$/remoting/helloworld/helloworld-ear/helloworld-ear.iml" />
+      <module fileurl="file://$PROJECT_DIR$/remoting/helloworld/helloworld-ejb/helloworld-ejb.iml" filepath="$PROJECT_DIR$/remoting/helloworld/helloworld-ejb/helloworld-ejb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/remoting/helloworld/helloworld-tests/helloworld-tests.iml" filepath="$PROJECT_DIR$/remoting/helloworld/helloworld-tests/helloworld-tests.iml" />
+      <module fileurl="file://$PROJECT_DIR$/remoting/helloworld/helloworld-web/helloworld-web.iml" filepath="$PROJECT_DIR$/remoting/helloworld/helloworld-web/helloworld-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hibernate/hibernate.iml" filepath="$PROJECT_DIR$/hibernate/hibernate.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hibernate/hibernate-tests/hibernate-tests.iml" filepath="$PROJECT_DIR$/hibernate/hibernate-tests/hibernate-tests.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hibernate/hibernate-web/hibernate-web.iml" filepath="$PROJECT_DIR$/hibernate/hibernate-web/hibernate-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/icefaces/icefaces.iml" filepath="$PROJECT_DIR$/icefaces/icefaces.iml" />
+      <module fileurl="file://$PROJECT_DIR$/icefaces/icefaces-ear/icefaces-ear.iml" filepath="$PROJECT_DIR$/icefaces/icefaces-ear/icefaces-ear.iml" />
+      <module fileurl="file://$PROJECT_DIR$/icefaces/icefaces-ejb/icefaces-ejb.iml" filepath="$PROJECT_DIR$/icefaces/icefaces-ejb/icefaces-ejb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/icefaces/icefaces-tests/icefaces-tests.iml" filepath="$PROJECT_DIR$/icefaces/icefaces-tests/icefaces-tests.iml" />
+      <module fileurl="file://$PROJECT_DIR$/icefaces/icefaces-web/icefaces-web.iml" filepath="$PROJECT_DIR$/icefaces/icefaces-web/icefaces-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/itext/itext.iml" filepath="$PROJECT_DIR$/itext/itext.iml" />
+      <module fileurl="file://$PROJECT_DIR$/itext/itext-ear/itext-ear.iml" filepath="$PROJECT_DIR$/itext/itext-ear/itext-ear.iml" />
+      <module fileurl="file://$PROJECT_DIR$/itext/itext-ejb/itext-ejb.iml" filepath="$PROJECT_DIR$/itext/itext-ejb/itext-ejb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/itext/itext-tests/itext-tests.iml" filepath="$PROJECT_DIR$/itext/itext-tests/itext-tests.iml" />
+      <module fileurl="file://$PROJECT_DIR$/itext/itext-web/itext-web.iml" filepath="$PROJECT_DIR$/itext/itext-web/itext-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jee6/jee6.iml" filepath="$PROJECT_DIR$/jee6/jee6.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jee6/jee6-tests/jee6-tests.iml" filepath="$PROJECT_DIR$/jee6/jee6-tests/jee6-tests.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jee6/jee6-web/jee6-web.iml" filepath="$PROJECT_DIR$/jee6/jee6-web/jee6-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jpa/jpa.iml" filepath="$PROJECT_DIR$/jpa/jpa.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jpa/jpa-tests/jpa-tests.iml" filepath="$PROJECT_DIR$/jpa/jpa-tests/jpa-tests.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jpa/jpa-web/jpa-web.iml" filepath="$PROJECT_DIR$/jpa/jpa-web/jpa-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mail/mail.iml" filepath="$PROJECT_DIR$/mail/mail.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mail/mail-ear/mail-ear.iml" filepath="$PROJECT_DIR$/mail/mail-ear/mail-ear.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mail/mail-ejb/mail-ejb.iml" filepath="$PROJECT_DIR$/mail/mail-ejb/mail-ejb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mail/mail-tests/mail-tests.iml" filepath="$PROJECT_DIR$/mail/mail-tests/mail-tests.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mail/mail-web/mail-web.iml" filepath="$PROJECT_DIR$/mail/mail-web/mail-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/messages/messages.iml" filepath="$PROJECT_DIR$/messages/messages.iml" />
+      <module fileurl="file://$PROJECT_DIR$/messages/messages-ear/messages-ear.iml" filepath="$PROJECT_DIR$/messages/messages-ear/messages-ear.iml" />
+      <module fileurl="file://$PROJECT_DIR$/messages/messages-ejb/messages-ejb.iml" filepath="$PROJECT_DIR$/messages/messages-ejb/messages-ejb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/messages/messages-tests/messages-tests.iml" filepath="$PROJECT_DIR$/messages/messages-tests/messages-tests.iml" />
+      <module fileurl="file://$PROJECT_DIR$/messages/messages-web/messages-web.iml" filepath="$PROJECT_DIR$/messages/messages-web/messages-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/nestedbooking/nestedbooking.iml" filepath="$PROJECT_DIR$/nestedbooking/nestedbooking.iml" />
+      <module fileurl="file://$PROJECT_DIR$/nestedbooking/nestedbooking-ear/nestedbooking-ear.iml" filepath="$PROJECT_DIR$/nestedbooking/nestedbooking-ear/nestedbooking-ear.iml" />
+      <module fileurl="file://$PROJECT_DIR$/nestedbooking/nestedbooking-ejb/nestedbooking-ejb.iml" filepath="$PROJECT_DIR$/nestedbooking/nestedbooking-ejb/nestedbooking-ejb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/nestedbooking/nestedbooking-tests/nestedbooking-tests.iml" filepath="$PROJECT_DIR$/nestedbooking/nestedbooking-tests/nestedbooking-tests.iml" />
+      <module fileurl="file://$PROJECT_DIR$/nestedbooking/nestedbooking-web/nestedbooking-web.iml" filepath="$PROJECT_DIR$/nestedbooking/nestedbooking-web/nestedbooking-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/numberguess/numberguess.iml" filepath="$PROJECT_DIR$/numberguess/numberguess.iml" />
+      <module fileurl="file://$PROJECT_DIR$/numberguess/numberguess-ear/numberguess-ear.iml" filepath="$PROJECT_DIR$/numberguess/numberguess-ear/numberguess-ear.iml" />
+      <module fileurl="file://$PROJECT_DIR$/numberguess/numberguess-ejb/numberguess-ejb.iml" filepath="$PROJECT_DIR$/numberguess/numberguess-ejb/numberguess-ejb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/numberguess/numberguess-tests/numberguess-tests.iml" filepath="$PROJECT_DIR$/numberguess/numberguess-tests/numberguess-tests.iml" />
+      <module fileurl="file://$PROJECT_DIR$/numberguess/numberguess-web/numberguess-web.iml" filepath="$PROJECT_DIR$/numberguess/numberguess-web/numberguess-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/openid/openid.iml" filepath="$PROJECT_DIR$/openid/openid.iml" />
+      <module fileurl="file://$PROJECT_DIR$/openid/openid-ear/openid-ear.iml" filepath="$PROJECT_DIR$/openid/openid-ear/openid-ear.iml" />
+      <module fileurl="file://$PROJECT_DIR$/openid/openid-ejb/openid-ejb.iml" filepath="$PROJECT_DIR$/openid/openid-ejb/openid-ejb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/openid/openid-tests/openid-tests.iml" filepath="$PROJECT_DIR$/openid/openid-tests/openid-tests.iml" />
+      <module fileurl="file://$PROJECT_DIR$/openid/openid-web/openid-web.iml" filepath="$PROJECT_DIR$/openid/openid-web/openid-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/quartz/quartz.iml" filepath="$PROJECT_DIR$/quartz/quartz.iml" />
+      <module fileurl="file://$PROJECT_DIR$/quartz/quartz-ear/quartz-ear.iml" filepath="$PROJECT_DIR$/quartz/quartz-ear/quartz-ear.iml" />
+      <module fileurl="file://$PROJECT_DIR$/quartz/quartz-ejb/quartz-ejb.iml" filepath="$PROJECT_DIR$/quartz/quartz-ejb/quartz-ejb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/quartz/quartz-tests/quartz-tests.iml" filepath="$PROJECT_DIR$/quartz/quartz-tests/quartz-tests.iml" />
+      <module fileurl="file://$PROJECT_DIR$/quartz/quartz-web/quartz-web.iml" filepath="$PROJECT_DIR$/quartz/quartz-web/quartz-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/registration/registration.iml" filepath="$PROJECT_DIR$/registration/registration.iml" />
+      <module fileurl="file://$PROJECT_DIR$/registration/registration-ear/registration-ear.iml" filepath="$PROJECT_DIR$/registration/registration-ear/registration-ear.iml" />
+      <module fileurl="file://$PROJECT_DIR$/registration/registration-ejb/registration-ejb.iml" filepath="$PROJECT_DIR$/registration/registration-ejb/registration-ejb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/registration/registration-web/registration-web.iml" filepath="$PROJECT_DIR$/registration/registration-web/registration-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/restbay/restbay.iml" filepath="$PROJECT_DIR$/restbay/restbay.iml" />
+      <module fileurl="file://$PROJECT_DIR$/restbay/restbay-ear/restbay-ear.iml" filepath="$PROJECT_DIR$/restbay/restbay-ear/restbay-ear.iml" />
+      <module fileurl="file://$PROJECT_DIR$/restbay/restbay-ejb/restbay-ejb.iml" filepath="$PROJECT_DIR$/restbay/restbay-ejb/restbay-ejb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/restbay/restbay-tests/restbay-tests.iml" filepath="$PROJECT_DIR$/restbay/restbay-tests/restbay-tests.iml" />
+      <module fileurl="file://$PROJECT_DIR$/restbay/restbay-web/restbay-web.iml" filepath="$PROJECT_DIR$/restbay/restbay-web/restbay-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rss/rss.iml" filepath="$PROJECT_DIR$/rss/rss.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rss/rss-ear/rss-ear.iml" filepath="$PROJECT_DIR$/rss/rss-ear/rss-ear.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rss/rss-ejb/rss-ejb.iml" filepath="$PROJECT_DIR$/rss/rss-ejb/rss-ejb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rss/rss-tests/rss-tests.iml" filepath="$PROJECT_DIR$/rss/rss-tests/rss-tests.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rss/rss-web/rss-web.iml" filepath="$PROJECT_DIR$/rss/rss-web/rss-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/seambay/seambay.iml" filepath="$PROJECT_DIR$/seambay/seambay.iml" />
+      <module fileurl="file://$PROJECT_DIR$/seambay/seambay-ear/seambay-ear.iml" filepath="$PROJECT_DIR$/seambay/seambay-ear/seambay-ear.iml" />
+      <module fileurl="file://$PROJECT_DIR$/seambay/seambay-ejb/seambay-ejb.iml" filepath="$PROJECT_DIR$/seambay/seambay-ejb/seambay-ejb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/seambay/seambay-tests/seambay-tests.iml" filepath="$PROJECT_DIR$/seambay/seambay-tests/seambay-tests.iml" />
+      <module fileurl="file://$PROJECT_DIR$/seambay/seambay-web/seambay-web.iml" filepath="$PROJECT_DIR$/seambay/seambay-web/seambay-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/seamdiscs/seamdiscs.iml" filepath="$PROJECT_DIR$/seamdiscs/seamdiscs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/seamdiscs/seamdiscs-ear/seamdiscs-ear.iml" filepath="$PROJECT_DIR$/seamdiscs/seamdiscs-ear/seamdiscs-ear.iml" />
+      <module fileurl="file://$PROJECT_DIR$/seamdiscs/seamdiscs-ejb/seamdiscs-ejb.iml" filepath="$PROJECT_DIR$/seamdiscs/seamdiscs-ejb/seamdiscs-ejb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/seamdiscs/seamdiscs-tests/seamdiscs-tests.iml" filepath="$PROJECT_DIR$/seamdiscs/seamdiscs-tests/seamdiscs-tests.iml" />
+      <module fileurl="file://$PROJECT_DIR$/seamdiscs/seamdiscs-web/seamdiscs-web.iml" filepath="$PROJECT_DIR$/seamdiscs/seamdiscs-web/seamdiscs-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/seampay/seampay.iml" filepath="$PROJECT_DIR$/seampay/seampay.iml" />
+      <module fileurl="file://$PROJECT_DIR$/seampay/seampay-ear/seampay-ear.iml" filepath="$PROJECT_DIR$/seampay/seampay-ear/seampay-ear.iml" />
+      <module fileurl="file://$PROJECT_DIR$/seampay/seampay-ejb/seampay-ejb.iml" filepath="$PROJECT_DIR$/seampay/seampay-ejb/seampay-ejb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/seampay/seampay-tests/seampay-tests.iml" filepath="$PROJECT_DIR$/seampay/seampay-tests/seampay-tests.iml" />
+      <module fileurl="file://$PROJECT_DIR$/seampay/seampay-web/seampay-web.iml" filepath="$PROJECT_DIR$/seampay/seampay-web/seampay-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/seamspace/seamspace.iml" filepath="$PROJECT_DIR$/seamspace/seamspace.iml" />
+      <module fileurl="file://$PROJECT_DIR$/seamspace/seamspace-ear/seamspace-ear.iml" filepath="$PROJECT_DIR$/seamspace/seamspace-ear/seamspace-ear.iml" />
+      <module fileurl="file://$PROJECT_DIR$/seamspace/seamspace-ejb/seamspace-ejb.iml" filepath="$PROJECT_DIR$/seamspace/seamspace-ejb/seamspace-ejb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/seamspace/seamspace-tests/seamspace-tests.iml" filepath="$PROJECT_DIR$/seamspace/seamspace-tests/seamspace-tests.iml" />
+      <module fileurl="file://$PROJECT_DIR$/seamspace/seamspace-web/seamspace-web.iml" filepath="$PROJECT_DIR$/seamspace/seamspace-web/seamspace-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring/spring.iml" filepath="$PROJECT_DIR$/spring/spring.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring/spring-tests/spring-tests.iml" filepath="$PROJECT_DIR$/spring/spring-tests/spring-tests.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring/spring-web/spring-web.iml" filepath="$PROJECT_DIR$/spring/spring-web/spring-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tasks/tasks.iml" filepath="$PROJECT_DIR$/tasks/tasks.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tasks/tasks-ear/tasks-ear.iml" filepath="$PROJECT_DIR$/tasks/tasks-ear/tasks-ear.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tasks/tasks-ejb/tasks-ejb.iml" filepath="$PROJECT_DIR$/tasks/tasks-ejb/tasks-ejb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tasks/tasks-tests/tasks-tests.iml" filepath="$PROJECT_DIR$/tasks/tasks-tests/tasks-tests.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tasks/tasks-web/tasks-web.iml" filepath="$PROJECT_DIR$/tasks/tasks-web/tasks-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/todo/todo.iml" filepath="$PROJECT_DIR$/todo/todo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/todo/todo-ear/todo-ear.iml" filepath="$PROJECT_DIR$/todo/todo-ear/todo-ear.iml" />
+      <module fileurl="file://$PROJECT_DIR$/todo/todo-ejb/todo-ejb.iml" filepath="$PROJECT_DIR$/todo/todo-ejb/todo-ejb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/todo/todo-tests/todo-tests.iml" filepath="$PROJECT_DIR$/todo/todo-tests/todo-tests.iml" />
+      <module fileurl="file://$PROJECT_DIR$/todo/todo-web/todo-web.iml" filepath="$PROJECT_DIR$/todo/todo-web/todo-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ui/ui.iml" filepath="$PROJECT_DIR$/ui/ui.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ui/ui-ear/ui-ear.iml" filepath="$PROJECT_DIR$/ui/ui-ear/ui-ear.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ui/ui-ejb/ui-ejb.iml" filepath="$PROJECT_DIR$/ui/ui-ejb/ui-ejb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ui/ui-tests/ui-tests.iml" filepath="$PROJECT_DIR$/ui/ui-tests/ui-tests.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ui/ui-web/ui-web.iml" filepath="$PROJECT_DIR$/ui/ui-web/ui-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wicket/wicket.iml" filepath="$PROJECT_DIR$/wicket/wicket.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wicket/wicket-ear/wicket-ear.iml" filepath="$PROJECT_DIR$/wicket/wicket-ear/wicket-ear.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wicket/wicket-ejb/wicket-ejb.iml" filepath="$PROJECT_DIR$/wicket/wicket-ejb/wicket-ejb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wicket/wicket-tests/wicket-tests.iml" filepath="$PROJECT_DIR$/wicket/wicket-tests/wicket-tests.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wicket/wicket-web/wicket-web.iml" filepath="$PROJECT_DIR$/wicket/wicket-web/wicket-web.iml" />
+    </modules>
+  </component>
+</project>

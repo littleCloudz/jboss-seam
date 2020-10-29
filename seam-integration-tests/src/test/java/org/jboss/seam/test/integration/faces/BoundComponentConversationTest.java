@@ -64,8 +64,8 @@ public class BoundComponentConversationTest
                   "</html>"), "test.xhtml");
    }
    
+   @Ignore // JBSEAM-5020
    @Test
-   @Ignore //This test is not 100% correct, because of conversation init/restore is done later when this expect
    public void testConversationRestoration() throws Exception
    {
       Pattern conversationIdPattern = Pattern.compile("Conversation id: (\\d+)\\.");

@@ -274,7 +274,7 @@ public class MethodBindingToMethodExpression extends MethodExpression implements
         {
             return clazz.newInstance();
         }
-        catch(LinkageError e)
+        catch(NoClassDefFoundError e)
         {
             throw new FacesException(e);
         }

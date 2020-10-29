@@ -6,12 +6,6 @@ import javax.faces.convert.Converter;
 import javax.faces.convert.ConverterException;
 import javax.faces.convert.FacesConverter;
 
-/**
- * Converter for no selection value item  
- * 
- * @author mnovotny
- *
- */
 @FacesConverter(value="org.jboss.sema.ui.NoSelectionConverter")
 public class NoSelectionConverter implements Converter
 {

@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="ejb-jar" name="seamspace-ejb:ejb">
+    <output-path>$PROJECT_DIR$/seamspace/seamspace-ejb/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>seamspace-ejb</module>
+        <packaging>ejb</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="seamspace-ejb-2.3.0.CR1.jar">
+      <element id="artifact" artifact-name="seamspace-ejb:ejb exploded" />
+    </root>
+  </artifact>
+</component>

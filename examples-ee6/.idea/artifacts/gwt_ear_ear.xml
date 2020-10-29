@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="ear" name="gwt-ear:ear">
+    <output-path>$PROJECT_DIR$/remoting/gwt/gwt-ear/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>gwt-ear</module>
+        <packaging>ear</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="seam-gwt.ear">
+      <element id="artifact" artifact-name="gwt-ear:ear exploded" />
+    </root>
+  </artifact>
+</component>

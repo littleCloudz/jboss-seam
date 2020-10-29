@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="seamdiscs-web:war">
+    <output-path>$PROJECT_DIR$/seamdiscs/seamdiscs-web/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>seamdiscs-web</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="seamdiscs-web-2.3.0.CR1.war">
+      <element id="artifact" artifact-name="seamdiscs-web:war exploded" />
+    </root>
+  </artifact>
+</component>

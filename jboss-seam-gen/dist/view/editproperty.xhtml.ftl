@@ -25,7 +25,7 @@
                        required="true"
 </#if>
                           value="${'#'}{${homeName}.instance.${property.name}.${componentProperty.name}}">
-                    <s:convertDateTime type="time"/>
+                    <f:convertDateTime type="time"/>
                     <a:ajax event="blur" render="${componentProperty.name}Field" bypassUpdates="true"/>
                 </h:inputText>
 <#elseif isTimestamp(componentProperty)>
@@ -136,7 +136,7 @@
                        required="true"
 </#if>
                           value="${'#'}{${homeName}.instance.${property.name}}">
-                    <s:convertDateTime type="time"/>
+                    <f:convertDateTime type="time"/>
                     <a:ajax event="blur" render="${property.name}Field" bypassUpdates="true"/>
                 </h:inputText>
 <#elseif isTimestamp(property)>

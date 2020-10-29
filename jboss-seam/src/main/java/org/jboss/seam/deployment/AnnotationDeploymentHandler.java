@@ -63,7 +63,7 @@ public class AnnotationDeploymentHandler extends AbstractClassDeploymentHandler
          {
             log.warn("could not load annotation class: " + classname, cnfe);
          }
-         catch (LinkageError ncdfe) 
+         catch (NoClassDefFoundError ncdfe) 
          {
             log.warn("could not load annotation class (missing dependency): " + classname, ncdfe);
          }

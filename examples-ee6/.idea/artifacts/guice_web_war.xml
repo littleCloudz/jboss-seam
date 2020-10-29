@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="guice-web:war">
+    <output-path>$PROJECT_DIR$/guice/guice-web/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>guice-web</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="guice-web-2.3.0.CR1.war">
+      <element id="artifact" artifact-name="guice-web:war exploded" />
+    </root>
+  </artifact>
+</component>

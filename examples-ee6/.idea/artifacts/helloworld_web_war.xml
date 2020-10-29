@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="helloworld-web:war">
+    <output-path>$PROJECT_DIR$/remoting/helloworld/helloworld-web/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>helloworld-web</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="helloworld-web-2.3.0.CR1.war">
+      <element id="artifact" artifact-name="helloworld-web:war exploded" />
+    </root>
+  </artifact>
+</component>

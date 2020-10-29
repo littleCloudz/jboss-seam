@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="ejb-jar" name="wicket-ejb:ejb">
+    <output-path>$PROJECT_DIR$/wicket/wicket-ejb/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>wicket-ejb</module>
+        <packaging>ejb</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="wicket-ejb-2.3.0.CR1.jar">
+      <element id="artifact" artifact-name="wicket-ejb:ejb exploded" />
+    </root>
+  </artifact>
+</component>

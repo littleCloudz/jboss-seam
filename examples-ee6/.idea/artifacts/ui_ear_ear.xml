@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="ear" name="ui-ear:ear">
+    <output-path>$PROJECT_DIR$/ui/ui-ear/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>ui-ear</module>
+        <packaging>ear</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="seam-ui.ear">
+      <element id="artifact" artifact-name="ui-ear:ear exploded" />
+    </root>
+  </artifact>
+</component>

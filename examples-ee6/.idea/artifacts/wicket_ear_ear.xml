@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="ear" name="wicket-ear:ear">
+    <output-path>$PROJECT_DIR$/wicket/wicket-ear/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>wicket-ear</module>
+        <packaging>ear</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="seam-wicket.ear">
+      <element id="artifact" artifact-name="wicket-ear:ear exploded" />
+    </root>
+  </artifact>
+</component>

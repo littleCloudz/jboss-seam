@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="ui-web:war">
+    <output-path>$PROJECT_DIR$/ui/ui-web/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>ui-web</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="ui-web-2.3.0.CR1.war">
+      <element id="artifact" artifact-name="ui-web:war exploded" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="ejb-jar" name="guice-ejb:ejb">
+    <output-path>$PROJECT_DIR$/guice/guice-ejb/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>guice-ejb</module>
+        <packaging>ejb</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="guice-ejb-2.3.0.CR1.jar">
+      <element id="artifact" artifact-name="guice-ejb:ejb exploded" />
+    </root>
+  </artifact>
+</component>

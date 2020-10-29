@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="ear" name="numberguess-ear:ear">
+    <output-path>$PROJECT_DIR$/numberguess/numberguess-ear/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>numberguess-ear</module>
+        <packaging>ear</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="seam-numberguess.ear">
+      <element id="artifact" artifact-name="numberguess-ear:ear exploded" />
+    </root>
+  </artifact>
+</component>

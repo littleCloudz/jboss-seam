@@ -1,0 +1,36 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-ear" name="tasks-ear:ear exploded">
+    <output-path>$PROJECT_DIR$/tasks/tasks-ear/target/seam-tasks</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <exploded>true</exploded>
+        <module>tasks-ear</module>
+        <packaging>ear</packaging>
+      </options>
+    </properties>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="tasks-ear/javaeeApplication/JavaEE" />
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/tasks/tasks-ear/target/seam-tasks/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="dir-copy" path="$PROJECT_DIR$/tasks/tasks-ear/src/main/application" />
+      <element id="archive" name="tasks-web.war">
+        <element id="artifact" artifact-name="tasks-web:war exploded" />
+      </element>
+      <element id="archive" name="tasks-ejb.jar">
+        <element id="artifact" artifact-name="tasks-ejb:ejb exploded" />
+      </element>
+      <element id="directory" name="lib">
+        <element id="library" level="project" name="Maven: org.jboss.seam:jboss-seam-resteasy:2.3.0.CR1" />
+        <element id="library" level="project" name="Maven: org.testng:testng:5.14.10" />
+        <element id="library" level="project" name="Maven: org.beanshell:bsh:2.0b4" />
+        <element id="library" level="project" name="Maven: com.beust:jcommander:1.12" />
+        <element id="library" level="project" name="Maven: org.yaml:snakeyaml:1.6" />
+        <element id="library" level="project" name="Maven: junit:junit:4.8.2" />
+        <element id="library" level="project" name="Maven: org.jboss.el:jboss-el:1.0_02.CR6" />
+        <element id="library" level="project" name="Maven: javax.el:el-api:1.0" />
+      </element>
+      <element id="file-copy" path="$MAVEN_REPOSITORY$/org/jboss/seam/jboss-seam/2.3.0.CR1/jboss-seam-2.3.0.CR1.jar" output-file-name="jboss-seam.jar" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,29 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="excel-web:war exploded">
+    <output-path>$PROJECT_DIR$/excel/excel-web/target/excel-web-2.3.0.CR1</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <exploded>true</exploded>
+        <module>excel-web</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="excel-web" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: org.jboss.seam:jboss-seam-excel:2.3.0.CR1" />
+          <element id="library" level="project" name="Maven: org.jboss.seam:jboss-seam-ui:2.3.0.CR1" />
+          <element id="library" level="project" name="Maven: commons-beanutils:commons-beanutils:1.7.0" />
+          <element id="library" level="project" name="Maven: org.jboss.seam:jboss-seam-debug:2.3.0.CR1" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/excel/excel-web/target/excel-web-2.3.0.CR1/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="excel-web/web/Web" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="dvdstore-web:war">
+    <output-path>$PROJECT_DIR$/dvdstore/dvdstore-web/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>dvdstore-web</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="dvdstore-web-2.3.0.CR1.war">
+      <element id="artifact" artifact-name="dvdstore-web:war exploded" />
+    </root>
+  </artifact>
+</component>

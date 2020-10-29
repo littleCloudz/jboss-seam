@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="ejb-jar" name="restbay-ejb:ejb">
+    <output-path>$PROJECT_DIR$/restbay/restbay-ejb/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>restbay-ejb</module>
+        <packaging>ejb</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="restbay-ejb-2.3.0.CR1.jar">
+      <element id="artifact" artifact-name="restbay-ejb:ejb exploded" />
+    </root>
+  </artifact>
+</component>

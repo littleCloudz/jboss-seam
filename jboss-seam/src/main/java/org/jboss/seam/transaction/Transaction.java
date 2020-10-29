@@ -81,7 +81,7 @@ public class Transaction
       {
          return (javax.transaction.UserTransaction) context.lookup("java:comp/UserTransaction");
       }
-      catch (NamingException ne)
+      catch (NameNotFoundException nnfe)
       {
          try
          {
@@ -96,7 +96,7 @@ public class Transaction
          }
          catch (Exception e)
          {
-            throw ne;
+            throw nnfe;
          }
       }
    }

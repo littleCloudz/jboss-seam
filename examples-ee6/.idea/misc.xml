@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="ejb" url="file://$PROJECT_DIR$/blog/blog-ejb" />
+    <file type="ejb" url="file://$PROJECT_DIR$/booking/booking-ejb" />
+    <file type="ejb" url="file://$PROJECT_DIR$/contactlist/contactlist-ejb" />
+    <file type="ejb" url="file://$PROJECT_DIR$/drools/drools-ear/src/main/application" />
+    <file type="ejb" url="file://$PROJECT_DIR$/drools/drools-ejb" />
+    <file type="ejb" url="file://$PROJECT_DIR$/dvdstore/dvdstore-ejb" />
+    <file type="ejb" url="file://$PROJECT_DIR$/excel/excel-ejb" />
+    <file type="ejb" url="file://$PROJECT_DIR$/guice/guice-ejb" />
+    <file type="ejb" url="file://$PROJECT_DIR$/icefaces/icefaces-ejb" />
+    <file type="ejb" url="file://$PROJECT_DIR$/itext/itext-ejb" />
+    <file type="ejb" url="file://$PROJECT_DIR$/mail/mail-ejb" />
+    <file type="ejb" url="file://$PROJECT_DIR$/messages/messages-ejb" />
+    <file type="ejb" url="file://$PROJECT_DIR$/metawidget/booking/booking-ejb" />
+    <file type="ejb" url="file://$PROJECT_DIR$/nestedbooking/nestedbooking-ejb" />
+    <file type="ejb" url="file://$PROJECT_DIR$/numberguess/numberguess-ear/src/main/application" />
+    <file type="ejb" url="file://$PROJECT_DIR$/numberguess/numberguess-ejb" />
+    <file type="ejb" url="file://$PROJECT_DIR$/openid/openid-ejb" />
+    <file type="ejb" url="file://$PROJECT_DIR$/quartz/quartz-ejb" />
+    <file type="ejb" url="file://$PROJECT_DIR$/registration/registration-ejb" />
+    <file type="ejb" url="file://$PROJECT_DIR$/remoting/chatroom/chatroom-ejb" />
+    <file type="ejb" url="file://$PROJECT_DIR$/remoting/gwt/gwt-ejb" />
+    <file type="ejb" url="file://$PROJECT_DIR$/remoting/helloworld/helloworld-ejb" />
+    <file type="ejb" url="file://$PROJECT_DIR$/restbay/restbay-ejb" />
+    <file type="ejb" url="file://$PROJECT_DIR$/rss/rss-ejb" />
+    <file type="ejb" url="file://$PROJECT_DIR$/seambay/seambay-ejb" />
+    <file type="ejb" url="file://$PROJECT_DIR$/seamdiscs/seamdiscs-ejb" />
+    <file type="ejb" url="file://$PROJECT_DIR$/seampay/seampay-ejb" />
+    <file type="ejb" url="file://$PROJECT_DIR$/seamspace/seamspace-ejb" />
+    <file type="ejb" url="file://$PROJECT_DIR$/tasks/tasks-ejb" />
+    <file type="ejb" url="file://$PROJECT_DIR$/todo/todo-ear/src/main/application" />
+    <file type="ejb" url="file://$PROJECT_DIR$/todo/todo-ejb" />
+    <file type="ejb" url="file://$PROJECT_DIR$/ui/ui-ejb" />
+    <file type="ejb" url="file://$PROJECT_DIR$/wicket/wicket-ejb" />
+    <file type="gwt" url="file://$PROJECT_DIR$/remoting/gwt/gwt-ejb" />
+    <file type="javaeeApplication" url="file://$PROJECT_DIR$/blog/blog-ear" />
+    <file type="javaeeApplication" url="file://$PROJECT_DIR$/booking/booking-ear" />
+    <file type="javaeeApplication" url="file://$PROJECT_DIR$/contactlist/contactlist-ear" />
+    <file type="javaeeApplication" url="file://$PROJECT_DIR$/drools/drools-ear" />
+    <file type="javaeeApplication" url="file://$PROJECT_DIR$/dvdstore/dvdstore-ear" />
+    <file type="javaeeApplication" url="file://$PROJECT_DIR$/excel/excel-ear" />
+    <file type="javaeeApplication" url="file://$PROJECT_DIR$/guice/guice-ear" />
+    <file type="javaeeApplication" url="file://$PROJECT_DIR$/icefaces/icefaces-ear" />
+    <file type="javaeeApplication" url="file://$PROJECT_DIR$/itext/itext-ear" />
+    <file type="javaeeApplication" url="file://$PROJECT_DIR$/mail/mail-ear" />
+    <file type="javaeeApplication" url="file://$PROJECT_DIR$/messages/messages-ear" />
+    <file type="javaeeApplication" url="file://$PROJECT_DIR$/metawidget/booking/booking-ear" />
+    <file type="javaeeApplication" url="file://$PROJECT_DIR$/nestedbooking/nestedbooking-ear" />
+    <file type="javaeeApplication" url="file://$PROJECT_DIR$/numberguess/numberguess-ear" />
+    <file type="javaeeApplication" url="file://$PROJECT_DIR$/openid/openid-ear" />
+    <file type="javaeeApplication" url="file://$PROJECT_DIR$/quartz/quartz-ear" />
+    <file type="javaeeApplication" url="file://$PROJECT_DIR$/registration/registration-ear" />
+    <file type="javaeeApplication" url="file://$PROJECT_DIR$/remoting/chatroom/chatroom-ear" />
+    <file type="javaeeApplication" url="file://$PROJECT_DIR$/remoting/gwt/gwt-ear" />
+    <file type="javaeeApplication" url="file://$PROJECT_DIR$/remoting/helloworld/helloworld-ear" />
+    <file type="javaeeApplication" url="file://$PROJECT_DIR$/restbay/restbay-ear" />
+    <file type="javaeeApplication" url="file://$PROJECT_DIR$/rss/rss-ear" />
+    <file type="javaeeApplication" url="file://$PROJECT_DIR$/seambay/seambay-ear" />
+    <file type="javaeeApplication" url="file://$PROJECT_DIR$/seamdiscs/seamdiscs-ear" />
+    <file type="javaeeApplication" url="file://$PROJECT_DIR$/seampay/seampay-ear" />
+    <file type="javaeeApplication" url="file://$PROJECT_DIR$/seamspace/seamspace-ear" />
+    <file type="javaeeApplication" url="file://$PROJECT_DIR$/tasks/tasks-ear" />
+    <file type="javaeeApplication" url="file://$PROJECT_DIR$/todo/todo-ear" />
+    <file type="javaeeApplication" url="file://$PROJECT_DIR$/ui/ui-ear" />
+    <file type="javaeeApplication" url="file://$PROJECT_DIR$/wicket/wicket-ear" />
+    <file type="web" url="file://$PROJECT_DIR$/blog/blog-web" />
+    <file type="web" url="file://$PROJECT_DIR$/booking/booking-web" />
+    <file type="web" url="file://$PROJECT_DIR$/contactlist/contactlist-web" />
+    <file type="web" url="file://$PROJECT_DIR$/drools/drools-web" />
+    <file type="web" url="file://$PROJECT_DIR$/dvdstore/dvdstore-ejb/src/main/resources" />
+    <file type="web" url="file://$PROJECT_DIR$/dvdstore/dvdstore-tests" />
+    <file type="web" url="file://$PROJECT_DIR$/dvdstore/dvdstore-web" />
+    <file type="web" url="file://$PROJECT_DIR$/excel/excel-web" />
+    <file type="web" url="file://$PROJECT_DIR$/groovybooking/groovybooking-web" />
+    <file type="web" url="file://$PROJECT_DIR$/guice/guice-web" />
+    <file type="web" url="file://$PROJECT_DIR$/hibernate/hibernate-web" />
+    <file type="web" url="file://$PROJECT_DIR$/icefaces/icefaces-web" />
+    <file type="web" url="file://$PROJECT_DIR$/itext/itext-web" />
+    <file type="web" url="file://$PROJECT_DIR$/jee6/jee6-web" />
+    <file type="web" url="file://$PROJECT_DIR$/jpa/jpa-web" />
+    <file type="web" url="file://$PROJECT_DIR$/mail/mail-web" />
+    <file type="web" url="file://$PROJECT_DIR$/messages/messages-web" />
+    <file type="web" url="file://$PROJECT_DIR$/metawidget/booking/booking-web" />
+    <file type="web" url="file://$PROJECT_DIR$/metawidget/groovybooking/groovybooking-web" />
+    <file type="web" url="file://$PROJECT_DIR$/nestedbooking/nestedbooking-web" />
+    <file type="web" url="file://$PROJECT_DIR$/numberguess/numberguess-web" />
+    <file type="web" url="file://$PROJECT_DIR$/openid/openid-web" />
+    <file type="web" url="file://$PROJECT_DIR$/quartz/quartz-web" />
+    <file type="web" url="file://$PROJECT_DIR$/registration/registration-web" />
+    <file type="web" url="file://$PROJECT_DIR$/remoting/chatroom/chatroom-web" />
+    <file type="web" url="file://$PROJECT_DIR$/remoting/gwt/gwt-web" />
+    <file type="web" url="file://$PROJECT_DIR$/remoting/helloworld/helloworld-web" />
+    <file type="web" url="file://$PROJECT_DIR$/restbay/restbay-web" />
+    <file type="web" url="file://$PROJECT_DIR$/rss/rss-web" />
+    <file type="web" url="file://$PROJECT_DIR$/seambay/seambay-web" />
+    <file type="web" url="file://$PROJECT_DIR$/seamdiscs/seamdiscs-web" />
+    <file type="web" url="file://$PROJECT_DIR$/seampay/seampay-web" />
+    <file type="web" url="file://$PROJECT_DIR$/seamspace/seamspace-web" />
+    <file type="web" url="file://$PROJECT_DIR$/spring/spring-web" />
+    <file type="web" url="file://$PROJECT_DIR$/tasks/tasks-web" />
+    <file type="web" url="file://$PROJECT_DIR$/todo/todo-web" />
+    <file type="web" url="file://$PROJECT_DIR$/ui/ui-web" />
+    <file type="web" url="file://$PROJECT_DIR$/wicket/wicket-web" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
+</project>

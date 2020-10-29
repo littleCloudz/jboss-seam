@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="ear" name="helloworld-ear:ear">
+    <output-path>$PROJECT_DIR$/remoting/helloworld/helloworld-ear/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>helloworld-ear</module>
+        <packaging>ear</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="seam-helloworld.ear">
+      <element id="artifact" artifact-name="helloworld-ear:ear exploded" />
+    </root>
+  </artifact>
+</component>

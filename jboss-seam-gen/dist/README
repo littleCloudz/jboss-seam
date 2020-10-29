@@ -94,7 +94,7 @@ SEAM CODE GENERATION COMMANDS
    new-form
       Create a new Java interface and SFSB with key Seam/EJB3
       annotations, and associated xhtml view. Also, create a new
-      JUnit ARQ test case that can be used to simulate a JSF
+      TestNG test case that can be used to simulate a JSF
       request/response and standard JUnit type tests.
 
       Example: seam new-form
@@ -148,4 +148,12 @@ SEAM CODE GENERATION COMMANDS
 
       Example: seam add-identity-management
 
+   add-ivy
+     Alters an existing project to use Ivy to manage the dependencies. The
+     command adds Ivy configuration files and a corresponding Ant build file.
+     The Ant tasks invoke Ivy to download the dependency sets required to
+     build, test and deploy the application. The step of downloading the
+     dependencies is kept separate from the build life cycle.
+
+      Example: seam add-ivy
 

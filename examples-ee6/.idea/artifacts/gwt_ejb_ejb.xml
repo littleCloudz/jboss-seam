@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="ejb-jar" name="gwt-ejb:ejb">
+    <output-path>$PROJECT_DIR$/remoting/gwt/gwt-ejb/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>gwt-ejb</module>
+        <packaging>ejb</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="gwt-ejb-2.3.0.CR1.jar">
+      <element id="artifact" artifact-name="gwt-ejb:ejb exploded" />
+    </root>
+  </artifact>
+</component>

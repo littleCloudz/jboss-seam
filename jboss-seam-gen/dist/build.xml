@@ -19,12 +19,6 @@
             <os family="mac"/>
         </or>
     </condition>
-    <condition property="isUnix">
-       <os family="unix" />
-    </condition>
-    <condition property="isWindows">
-       <os family="windows" />
-    </condition>
     <condition property="seam.cmd" value="${cmd.prefix}seam" else="ant">
         <equals arg1="${seam-gen.properties}" arg2="${seam-gen.dir}/build.properties"/>
     </condition>
@@ -36,6 +30,7 @@
     <condition property="jboss.home" value="${env.JBOSS_HOME}" else="C:/Program Files/jboss-as-7.1.1.Final">
         <isset property="env.JBOSS_HOME"/>
     </condition>
+    <property name="jboss.domain" value="standalone"/>
     <condition property="glassfish.home" value="${env.GLASSFISH_HOME}" else="C:/Program Files/glassfish-v2.1">
         <isset property="env.GLASSFISH_HOME"/>
     </condition>
@@ -47,7 +42,7 @@
     <import file="${seam.dir}/build/common.build.xml"/>
 
     <target name="init">
-        <path id="seam-gen.lib.path" path="${seam.dir}/lib/jboss-seam-gen.jar"/>
+        <path id="seam-gen.lib.path" path="${seam.dir}/lib/gen/jboss-seam-gen.jar"/>
 
         <taskdef name="normalizeProjectName"
             classname="org.jboss.seam.tool.NormalizeProjectNameTask"
@@ -88,12 +83,6 @@
         <taskdef name="randomUUID"
             classname="org.jboss.seam.tool.RandomUUIDTask"
             classpathref="seam-gen.lib.path"/>
-
-        <taskdef resource="net/sf/antcontrib/antcontrib.properties">
-            <classpath>
-                <pathelement location="${seam.dir}/build/lib/ant-contrib-0.6.jar"/>
-            </classpath>
-        </taskdef>
     </target>
 
     <target name="init-properties" depends="init">
@@ -192,6 +181,7 @@
             <filter token="testPackage" value="${test.package}"/>
             <filter token="deploymentType" value="${project.type}"/>
             <filter token="jbossHome" value="${jboss.home}"/>
+            <filter token="jbossDomain" value="${jboss.domain}"/>
             <filter token="glassfishHome" value="${glassfish.home}"/>
             <filter token="glassfishDomain" value="${glassfish.domain}"/>
             <filter token="iceHome" value="${icefaces.home}"/>
@@ -203,58 +193,8 @@
 
     </target>
 
-    <target name="setup-librarylist-war" if="project.war">
-        <path id="library.fileset">
-            <fileset dir="${project.home}/lib">
-                <includesfile name="${project.home}/deployed-jars.list"/>
-                <include name="jboss-seam.jar"/>
-                <include name="javassist.jar"/>
-            </fileset>
-        </path>
-    </target>
+    <target name="setup-filters">
 
-    <target name="setup-librarylist-ear" if="project.ear">
-        <path id="library.fileset">
-            <fileset dir="${project.home}/lib">
-                <includesfile name="${project.home}/deployed-jars-ear.list"/>
-                <includesfile name="${project.home}/deployed-jars-war.list"/>
-                <include name="jboss-seam.jar"/>
-                <include name="javassist.jar"/>
-            </fileset>
-        </path>
-    </target>
-
-    <target name="setup-librarylist" 
-          depends="setup-librarylist-ear,setup-librarylist-war">
-       <condition property="regexp-library-delimiter" value=";" else=":">
-          <isset property="isWindows"/> 
-       </condition>
-
-        <property name="library.list.inner" refid="library.fileset"/>
-        <property name="indent" value="                          "/>
-        <!-- this changes all backspaces in paths to standard / -->
-        <propertyregex property="library.list.inner"
-                       override="true"
-                       regexp="\\"
-                       replace="/"
-                       input="${library.list.inner}"
-                       global="true"/>
-        <propertyregex property="library.list.inner"
-                       override="true"
-                       regexp="${regexp-library-delimiter}"
-                       replace='"), ${line.separator} ${indent} new File(PROJECT_HOME + "'
-                       input="${library.list.inner}"
-                       global="true"/>
-        <propertyregex property="library.list.inner"
-                       override="true"
-                       regexp="${project.home}/"
-                       replace=""
-                       input="${library.list.inner}"
-                       global="true"/>
-        <property name="library.list" value='new File(PROJECT_HOME + "${library.list.inner}")'/>
-    </target>
-
-    <target name="setup-filters" depends="setup-librarylist">
         <filterset id="filters">
             <filter token="interfaceName" value="${interface.name}"/>
             <filter token="beanName" value="${bean.name}"/>
@@ -269,10 +209,6 @@
             <filter token="listName" value="${component.name}List"/>
             <filter token="homeName" value="${component.name}Home"/>
             <filter token="query" value="${query.text}"/>
-            <filter token="projectName" value="${project.name}"/>
-            <filter token="projectType" value="${project.type}"/>
-            <filter token="workspaceHome" value="${workspace.home}"/>
-            <filter token="libraryList" value="${library.list}"/>
         </filterset>
 
     </target>
@@ -295,6 +231,11 @@
                    message="Enter your JBoss AS home directory [${old.jboss.home}]"
               defaultvalue="${old.jboss.home}"/>
         <pathFixer property="jboss.home.new"/>
+
+        <property name="old.jboss.domain" value="${jboss.domain}"/>
+        <input addproperty="jboss.domain.new"
+                   message="Enter your JBoss AS domain [${old.jboss.domain}]"
+              defaultvalue="${old.jboss.domain}"/>
 
         <property name="old.glassfish.home" value="${glassfish.home}"/>
         <input addproperty="glassfish.home.new"
@@ -525,7 +466,7 @@
         <property name="hibernate.connection.dataSource_class.default" value="org.h2.jdbcx.JdbcDataSource"/>
         <property name="hibernate.connection.url.default" value="jdbc:h2:."/>
 
-        <property name="driver.jar.default" value="h2"/>
+        <property name="driver.jar.default" value=""/>
         <input addproperty="driver.jar.new"
                    message="Enter the filesystem path to the JDBC driver jar [${driver.jar.default}]"
               defaultvalue="${driver.jar.default}"/>
@@ -631,6 +572,7 @@
             <entry key="richfaces.skin" value="${richfaces.skin.new}"/>
             <entry key="project.type" value="${project.type.new}"/>
             <entry key="jboss.home" value="${jboss.home.new}"/>
+            <entry key="jboss.domain" value="${jboss.domain.new}"/>
             <entry key="glassfish.home" value="${glassfish.home.new}"/>
             <entry key="glassfish.domain" value="${glassfish.domain.new}"/>
             <entry key="icefaces" value="${icefaces.new}"/>
@@ -659,7 +601,7 @@
         <condition property="has.license.jar">
             <not><equals arg1="${driver.license.jar.new}" arg2=""/></not>
         </condition>
-        <copy todir="${jboss.home.new}/standalone/deployments" overwrite="true">
+        <copy todir="${jboss.home.new}/${jboss.domain.new}/deployments" overwrite="true">
             <fileset file="${driver.jar.new}">
                 <include name="${driver.jar.new}"/>
             </fileset>
@@ -804,6 +746,7 @@
         <property name="list.file" value="${project.home}/src/${action.dir}/${entity.name}List.java"/>
         <property name="page.file" value="${project.home}/view/${page.name}.xhtml"/>
         <property name="masterPage.file" value="${project.home}/view/${masterPage.name}.xhtml"/>
+
     </target>
 
     <target name="query-input">
@@ -916,7 +859,7 @@
             <fileset dir="${templates.dir}/resources">
                 <include name="META-INF/orm.xml"/>
                 <include name="META-INF/persistence-*-war.xml"/>
-                <include name="WEB-INF/jboss-deployment-structure.xml"/>
+                <include name="META-INF/jboss-deployment-structure.xml"/>
    <!--             <include name="WEB-INF/jboss-web.xml"/> -->
             </fileset>
             <filterset refid="project"/>
@@ -995,7 +938,6 @@
                 <exclude name="META-INF/persistence*.xml"/>
                 <exclude name="META-INF/application.xml"/>
                 <exclude name="META-INF/ejb-jar.xml"/>
-                <exclude name="**/jboss-deployment-structure.xml"/>
                 <exclude name="WEB-INF/jboss-web.xml"/>
                 <exclude name="*identity-management*"/>
             </fileset>
@@ -1006,10 +948,10 @@
         <replace file="${project.home}/resources/META-INF/persistence-dev.xml">
             <replacefilter token="&lt;jta-data-source&gt;java:/" value="&lt;jta-data-source&gt;"/>
         </replace>
-    	<!-- JBoss AS 7 doesn't require this
+
         <replace dir="${project.home}/resources">
             <include name="WEB-INF/web.xml" if="project.war"/>
-           <replacetoken><![CDATA[</web-app>]]></replacetoken>
+            <replacetoken><![CDATA[</web-app>]]></replacetoken>
             <replacevalue><![CDATA[   <persistence-unit-ref>
       <persistence-unit-ref-name>@projectName@/pu</persistence-unit-ref-name>
       <persistence-unit-name>@projectName@</persistence-unit-name>
@@ -1017,7 +959,7 @@
 
 </web-app>]]></replacevalue>
 
-        </replace>-->
+        </replace>
 
         <replace dir="${project.home}/resources">
             <include name="WEB-INF/web.xml" if="project.ear"/>
@@ -1032,16 +974,16 @@
    </ejb-local-ref>
    -->
 
-   <!-- Add entries for each EJB session bean which is also a Seam component (not required on JBoss AS) --> 
+   <!-- Add entries for each EJB session bean which is also a Seam component (not required on JBoss AS) -->
 
-   <!-- <persistence-unit-ref>
+   <persistence-unit-ref>
       <persistence-unit-ref-name>@projectName@/pu</persistence-unit-ref-name>
-      <persistence-unit-name>../@projectName@.jar#@projectName@</persistence-unit-name> -->
+      <persistence-unit-name>../@projectName@.jar#@projectName@</persistence-unit-name>
       <!-- The relative reference doesn't work on GlassFish. Instead, set the <persistence-unit-name> to "@projectName@",
            package persistence.xml in the WAR, and add a <jar-file> element in persistence.xml with value "../../@projectName@.jar".
       <persistence-unit-name>@projectName@</persistence-unit-name>
       -->
-   <!--</persistence-unit-ref>-->
+   </persistence-unit-ref>
 
 </web-app>]]></replacevalue>
 
@@ -1171,7 +1113,7 @@
                 <include name="login.page.xml"/>
                 <include name="index.html"/>
                 <include name="layout/*"/>
-                <include name="resources/*"/>
+                <include name="stylesheet/*"/>
                 <exclude name="**/*.ftl"/>
             </fileset>
             <filterset refid="project"/>
@@ -1300,7 +1242,7 @@
         <copy todir="${project.home}/view">
             <fileset dir="${templates.dir}/view">
                 <include name="useradmin/**"/>
-                <include name="resources/useradmin.css"/>
+                <include name="stylesheet/useradmin.css"/>
                 <include name="img/btn*"/>
                 <include name="img/true.png"/>
                 <include name="img/false.png"/>
@@ -1362,15 +1304,11 @@
         </copy>
         <copy file="${templates.dir}/src/Action.java" tofile="${interface.file}">
             <filterset refid="filters"/>
-        </copy>  	
+        </copy>
         <copy file="${templates.dir}/test/ActionTest.java" tofile="${test.file}">
             <filterset refid="filters"/>
-            <filterset>
-                <filter token="extraImports" value="import ${action.package}.${interface.name};${line.separator}import ${action.package}.${bean.name};"/>
-            </filterset>
         </copy>
-    	<mkdir dir="${project.home}/resources-test"/>
-        <copy file="${templates.dir}/test/arquillian.xml" tofile="${project.home}/resources-test/arquillian.xml">
+        <copy file="${templates.dir}/test/testng.xml" tofile="${testng.file}">
             <filterset refid="filters"/>
         </copy>
         <copy file="${templates.dir}/view/action.xhtml" tofile="${page.file}">
@@ -1386,12 +1324,8 @@
         </copy>
         <copy file="${templates.dir}/test/ActionTest.java" tofile="${test.file}">
             <filterset refid="filters"/>
-            <filterset>
-                <filter token="extraImports" value="import ${action.package}.${bean.name};"/>
-            </filterset>
-        </copy>     	
-        <mkdir dir="${project.home}/resources-test"/>
-        <copy file="${templates.dir}/test/arquillian.xml" tofile="${project.home}/resources-test/arquillian.xml">
+        </copy>
+        <copy file="${templates.dir}/test/testng.xml" tofile="${testng.file}">
             <filterset refid="filters"/>
         </copy>
         <copy file="${templates.dir}/view/action.xhtml" tofile="${page.file}">
@@ -1407,17 +1341,13 @@
         </copy>
         <copy file="${templates.dir}/test/FormTest.java" tofile="${test.file}">
             <filterset refid="filters"/>
-            <filterset>
-                <filter token="extraImports" value="import ${action.package}.${bean.name};"/>
-            </filterset>
-        </copy> 	
+        </copy>
         <copy file="${templates.dir}/view/form.xhtml" tofile="${page.file}">
             <filterset refid="filters"/>
         </copy>
-        <mkdir dir="${project.home}/resources-test"/>
-        <copy file="${templates.dir}/test/arquillian.xml" tofile="${project.home}/resources-test/arquillian.xml">
+        <copy file="${templates.dir}/test/testng.xml" tofile="${testng.file}">
             <filterset refid="filters"/>
-        </copy>    	
+        </copy>
         <echo message="Type '${seam.cmd} explode' and go to http://localhost:8080/${project.name}/${page.name}.seam"/>
     </target>
 
@@ -1431,15 +1361,11 @@
         </copy>
         <copy file="${templates.dir}/test/FormTest.java" tofile="${test.file}">
             <filterset refid="filters"/>
-            <filterset>
-                <filter token="extraImports" value="import ${action.package}.${interface.name};${line.separator}import ${action.package}.${bean.name};"/>
-            </filterset>
         </copy>
         <copy file="${templates.dir}/view/form.xhtml" tofile="${page.file}">
             <filterset refid="filters"/>
-        </copy>        
-        <mkdir dir="${project.home}/resources-test"/>
-        <copy file="${templates.dir}/test/arquillian.xml" tofile="${project.home}/resources-test/arquillian.xml">
+        </copy>
+        <copy file="${templates.dir}/test/testng.xml" tofile="${testng.file}">
             <filterset refid="filters"/>
         </copy>
         <echo message="Type '${seam.cmd} restart' and go to http://localhost:8080/${project.name}/${page.name}.seam"/>
@@ -1537,7 +1463,51 @@
         <echo message="Type '${seam.cmd} restart' and go to http://localhost:8080/${project.name}/${masterPage.name}.seam"/>
     </target>
 
-    <!-- Do not remove generate-entities, netbeans depends o n it -->
+    <target name="add-ivy" depends="validate-project" description="Add Ivy to the project for downloading dependencies">
+        <copy todir="${project.home}">
+            <fileset dir="${templates.dir}/ivy"/>
+            <filterset refid="project"/>
+        </copy>
+        <condition property="ivy.present">
+            <isfileselected file="${project.home}/build.xml">
+                <contains text="ivy-build.xml"/>
+            </isfileselected>
+        </condition>
+        <replace dir="${project.home}">
+            <include name="build.xml" unless="ivy.present"/>
+            <replacetoken><![CDATA[<target name="init"]]></replacetoken>
+            <replacevalue><![CDATA[<!-- Import Ivy targets for downloading dependencies -->
+    <import file="${basedir}/ivy-build.xml"/>
+
+    <target name="init"]]></replacevalue>
+        </replace>
+
+        <!-- uncomment richfaces dependencies if not using icefaces -->
+        <replace dir="${project.home}">
+            <include name="ivy.xml" unless="icefaces.property"/>
+            <replacetoken><![CDATA[ [if richfaces] ->]]></replacetoken>
+            <replacevalue><![CDATA[ [if richfaces] -->]]></replacevalue>
+        </replace>
+        <replace dir="${project.home}">
+            <include name="ivy.xml" unless="icefaces.property"/>
+            <replacetoken><![CDATA[<!- [/endif richfaces] ]]></replacetoken>
+            <replacevalue><![CDATA[<!-- [/endif richfaces] ]]></replacevalue>
+        </replace>
+
+        <!-- uncomment icefaces dependencies if using icefaces -->
+        <replace dir="${project.home}">
+            <include name="ivy.xml" if="icefaces.property"/>
+            <replacetoken><![CDATA[ [if icefaces] ->]]></replacetoken>
+            <replacevalue><![CDATA[ [if icefaces] -->]]></replacevalue>
+        </replace>
+        <replace dir="${project.home}">
+            <include name="ivy.xml" if="icefaces.property"/>
+            <replacetoken><![CDATA[<!- [/endif icefaces] ]]></replacetoken>
+            <replacevalue><![CDATA[<!-- [/endif icefaces] ]]></replacevalue>
+        </replace>
+    </target>
+
+    <!-- Do not remove generate-entities, netbeans depends on it -->
     <target name="generate-entities" depends="generate"/>
     <target name="generate" depends="validate-project,generate-model,generate-ui"
         description="Reverse engineer entities from the database">
@@ -1546,33 +1516,37 @@
     <target name="init-generate">
         <path id="htools.classpath">
             <pathelement path="${seam.dir}/lib/ant.jar"/>
-        	<pathelement path="${seam.dir}/seam-gen/lib/ant-launcher.jar"/>
-            <pathelement path="${seam.dir}/seam-gen/lib/hibernate-core.jar"/>
-            <pathelement path="${seam.dir}/seam-gen/lib/hibernate-entitymanager.jar"/>
-            <pathelement path="${seam.dir}/seam-gen/lib/hibernate-tools.jar"/>
-            <pathelement path="${seam.dir}/seam-gen/lib/freemarker.jar"/>
-        	<pathelement path="${seam.dir}/seam-gen/lib/core.jar"/>
-            <pathelement path="${seam.dir}/seam-gen/lib/commons-collections.jar"/>
-            <pathelement path="${seam.dir}/seam-gen/lib/commons-logging.jar"/>
-            <pathelement path="${seam.dir}/seam-gen/lib/runtime.jar"/>
-            <pathelement path="${seam.dir}/seam-gen/lib/common.jar"/>
-            <pathelement path="${seam.dir}/seam-gen/lib/text.jar"/>
+            <pathelement path="${seam.dir}/lib/gen/hibernate-tools.jar"/>
+            <pathelement path="${seam.dir}/lib/gen/freemarker.jar"/>
+            <pathelement path="${seam.dir}/lib/jboss-seam.jar"/>
+            <pathelement path="${seam.dir}/lib/gen/runtime.jar"/>
+            <pathelement path="${seam.dir}/lib/gen/common.jar"/>
+            <pathelement path="${seam.dir}/lib/gen/text.jar"/>
             <pathelement path="${seam.dir}/lib/dom4j.jar"/>
+            <pathelement path="${seam.dir}/lib/persistence-api.jar"/>
+            <pathelement path="${seam.dir}/lib/hibernate-core.jar"/>
             <pathelement path="${seam.dir}/lib/hibernate-commons-annotations.jar"/>
+            <pathelement path="${seam.dir}/lib/hibernate-annotations.jar"/>
+            <pathelement path="${seam.dir}/lib/hibernate-entitymanager.jar"/>
             <pathelement path="${seam.dir}/lib/hibernate-validator.jar"/>
             <pathelement path="${seam.dir}/lib/jboss-logging.jar"/>
             <pathelement path="${seam.dir}/lib/jboss-transaction-api_1.1_spec.jar"/>
-            <pathelement path="${seam.dir}/lib/hibernate-jpa-2.0-api.jar"/>                       
-            <pathelement path="${seam.dir}/lib/slf4j-api.jar"/>             
+            <pathelement path="${seam.dir}/lib/hibernate-jpa-2.0-api.jar"/>
+            <pathelement path="${seam.dir}/lib/gen/core.jar"/>            
+            <pathelement path="${seam.dir}/lib/slf4j-api.jar"/> 
+            <pathelement path="${seam.dir}/lib/slf4j-log4j12.jar"/> 
             <pathelement path="${seam.dir}/lib/log4j.jar"/> 
+            <pathelement path="${seam.dir}/lib/commons-collections.jar"/>
+            <pathelement path="${seam.dir}/lib/commons-logging.jar"/>
             <pathelement path="${seam.dir}/lib/javassist.jar"/>
+            <pathelement path="${seam.dir}/lib/cglib-nodep.jar"/>
             <pathelement path="${seam.dir}/lib/asm.jar"/>
+            <pathelement path="${seam.dir}/lib/core.jar"/>
             <pathelement path="${seam.dir}/lib/jboss-common-core.jar"/>
             <pathelement path="${seam.dir}/lib/concurrent.jar"/>
             <pathelement path="${driver.jar}"/>
             <pathelement path="${driver.license.jar}"/>
-            <pathelement path="${seam.dir}/lib/jboss-seam.jar"/>
-            <pathelement path="${seam.dir}/lib/jboss-seam-gen.jar"/>
+            <pathelement path="${seam.dir}/lib/gen/jboss-seam-gen.jar"/>
         </path>
         <taskdef name="hibernate" classname="org.hibernate.tool.ant.HibernateToolTask" classpathref="htools.classpath"/>
     </target>

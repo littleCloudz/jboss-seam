@@ -1,0 +1,27 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="wicket-web:war exploded">
+    <output-path>$PROJECT_DIR$/wicket/wicket-web/target/wicket-web-2.3.0.CR1</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <exploded>true</exploded>
+        <module>wicket-web</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="wicket-web" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: org.jboss.seam:jboss-seam-debug:2.3.0.CR1" />
+          <element id="library" level="project" name="Maven: org.javassist:javassist:3.15.0-GA" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/wicket/wicket-web/target/wicket-web-2.3.0.CR1/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="wicket-web/web/Web" />
+    </root>
+  </artifact>
+</component>

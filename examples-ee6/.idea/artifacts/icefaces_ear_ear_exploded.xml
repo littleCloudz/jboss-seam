@@ -1,0 +1,29 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-ear" name="icefaces-ear:ear exploded">
+    <output-path>$PROJECT_DIR$/icefaces/icefaces-ear/target/seam-icefaces</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <exploded>true</exploded>
+        <module>icefaces-ear</module>
+        <packaging>ear</packaging>
+      </options>
+    </properties>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="icefaces-ear/javaeeApplication/JavaEE" />
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/icefaces/icefaces-ear/target/seam-icefaces/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="dir-copy" path="$PROJECT_DIR$/icefaces/icefaces-ear/src/main/application" />
+      <element id="archive" name="icefaces-web.war">
+        <element id="artifact" artifact-name="icefaces-web:war exploded" />
+      </element>
+      <element id="archive" name="icefaces-ejb.jar">
+        <element id="artifact" artifact-name="icefaces-ejb:ejb exploded" />
+      </element>
+      <element id="file-copy" path="$MAVEN_REPOSITORY$/org/jboss/seam/jboss-seam/2.3.0.CR1/jboss-seam-2.3.0.CR1.jar" output-file-name="jboss-seam.jar" />
+      <element id="directory" name="lib">
+        <element id="library" level="project" name="Maven: org.jboss.el:jboss-el:1.0_02.CR6" />
+      </element>
+    </root>
+  </artifact>
+</component>

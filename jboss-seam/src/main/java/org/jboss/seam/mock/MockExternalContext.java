@@ -30,16 +30,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import org.dom4j.Document;
-import org.dom4j.DocumentFactory;
-import org.jboss.seam.log.LogProvider;
-import org.jboss.seam.log.Logging;
 import org.jboss.seam.util.EnumerationIterator;
 
 /**
  * @author Gavin King
  * @author <a href="mailto:theute@jboss.org">Thomas Heute</a>
- * @author Marek Novotny
  * @version $Revision: 13963 $
  */
 public class MockExternalContext extends ExternalContext
@@ -49,12 +44,10 @@ public class MockExternalContext extends ExternalContext
    private HttpServletRequest request;
 
    private HttpServletResponse response;
-   
-   private static final LogProvider log = Logging.getLogProvider( MockExternalContext.class );
 
    public MockExternalContext()
    {
-	   this.context = new MockServletContext();
+      this.context = new MockServletContext();
       this.request = new MockHttpServletRequest(new MockHttpSession(context));
       this.response = new MockHttpServletResponse();
    }
@@ -115,12 +108,6 @@ public class MockExternalContext extends ExternalContext
    public String encodeResourceURL(String url)
    {
       return encodeURL(url);
-   }
-
-   @Override
-   public String encodeRedirectURL(String baseUrl, Map<String, List<String>> parameters)
-   {
-      return encodeURL(baseUrl);
    }
 
    @Override
@@ -195,12 +182,6 @@ public class MockExternalContext extends ExternalContext
    public Object getRequest()
    {
       return request;
-   }
-
-   @Override
-   public String getRequestCharacterEncoding()
-   {
-      return request.getCharacterEncoding();
    }
 
    @Override
@@ -544,29 +525,12 @@ public class MockExternalContext extends ExternalContext
    @Override
    public void redirect(String url) throws IOException
    {
-      if ("partial/ajax".equals(this.request.getHeader("Faces-Request")) &&
-            !this.response.isCommitted())
-      {
-         this.response.reset(); //reset any data to not duplicate any response
-         this.response.setContentType("text/xml");
-         this.response.setCharacterEncoding("UTF-8");
-         this.response.addHeader("Cache-Control", "no-cache");
-         this.response.setStatus(HttpServletResponse.SC_OK);
-
-         final Document body = DocumentFactory.getInstance().createDocument("UTF-8");
-         body.addElement("partial-response").addElement("redirect").addAttribute("url", url);
-
-         this.response.getWriter().format(body.asXML());
-         this.response.getWriter().flush();
-      }
-      else
-      {         
-         this.response.sendRedirect(url);
-      }
-
+      response.sendRedirect(url);
       FacesContext.getCurrentInstance().responseComplete();
    }
    
+   
+
    @Override
    public void setRequest(Object myrequest)
    {

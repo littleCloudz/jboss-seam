@@ -15,7 +15,6 @@
     <property name="src.model.dir" value="src/main" />
     <property name="src.action.dir" value="src/hot" />
     <property name="src.test.dir" value="src/test" />
-	<property name="src.resources-test.dir" value="resources-test" />
     <property name="lib.dir" value="lib" />
     <property name="endorsed.dir" value="${lib.dir}/endorsed" />
     <property name="war.dir" value="exploded-archives/${project.name}.war" />
@@ -25,7 +24,8 @@
     <property name="classes.action.dir" value="${war.dir}/${action.dir}" />
     <property name="test.dir" value="test-build" />
     <property name="bootstrap.dir" value="${basedir}/bootstrap" />
-	<property name="deploy.dir" value="${jboss.home}/standalone/deployments"/>
+    <property name="jboss.domain" value="standalone"/>
+	<property name="deploy.dir" value="${jboss.home}/${jboss.domain}/deployments"/>
     <property name="war.deploy.dir" value="${deploy.dir}/${project.name}.war" />
     <property name="packaged.archive" value="${dist.dir}/${project.name}.war"/>
     <property name="testng.jar" value="${basedir}/lib/testng.jar" />
@@ -40,15 +40,11 @@
     <property name="schema.version" value="@schemaVersion@"/>
     
     <fileset id="lib" dir="${lib.dir}">
-        <include name="*.jar"/>
+        <include name="*.jar" />
     </fileset>
-    <fileset id="testlib" dir="${lib.dir}/test">
-        <include name="*.jar"/>
-     </fileset>
-
+    
     <path id="build.classpath">
-        <fileset refid="lib"/>
-        <fileset refid="testlib"/>
+        <fileset refid="lib" />
     </path>
 
     <!-- Import GlassFish deployment targets -->
@@ -58,12 +54,11 @@
 
         <taskdef name="groovyc"
             classname ="org.codehaus.groovy.ant.Groovyc"
-        	classpath="${lib.dir}/groovy-all.jar"/>
+            classpathref="build.classpath"/> <!-- really only the groovy jar is necessary -->
 
         <mkdir dir="${classes.model.dir}" />
         <mkdir dir="${classes.action.dir}" />
         <mkdir dir="${dist.dir}" />
-    	<mkdir dir="${src.resources-test.dir}"/>
 
         <condition property="is.debug" value="true">
             <istrue value="${debug}"/>
@@ -71,8 +66,12 @@
         <property name="transactionManagerLookupClass" value="org.hibernate.transaction.JBossTransactionManagerLookup"/>
         <property name="ejbJndiPattern" value="java:app/${project.name}.jar/#{ejbName}"/>
         <property name="seamBootstrapsPu" value="false" />
-        <property name="seamEmfRef" value="#{null}"/>
-        <property name="puJndiName" value="java:/${project.name}EntityManagerFactory"/>
+        <condition property="seamEmfRef" value="#{entityManagerFactory}" else="#{null}">
+            <istrue value="${seamBootstrapsPu}"/>
+        </condition>
+        <condition property="puJndiName" value="#{null}" else="java:comp/env/${project.name}/pu">
+            <istrue value="${seamBootstrapsPu}"/>
+        </condition>
 
         <filterset id="persistence">
             <filter token="transactionManagerLookupClass" value="${transactionManagerLookupClass}"/>
@@ -250,12 +249,12 @@
                 <include name="jbpm.cfg.xml" />
                 <include name="META-INF/orm.xml" />
                 <include name="*.skin.properties" if="richfaces.present"/>
-                <include name="**/*.ecss" if="richfaces.present"/>
+                <include name="**/*.xcss" if="richfaces.present"/>
             </fileset>
-            <!-- move ECSS into classpath for now
+            <!-- move XCSS into classpath for now
                  loading from web context only works in JBoss AS 4 -->
             <fileset dir="${basedir}/view"> 
-                <include name="**/*.ecss" if="richfaces.present"/>
+                <include name="**/*.xcss" if="richfaces.present"/>
             </fileset>
         </copy>
         
@@ -263,6 +262,7 @@
               file="${basedir}/resources/WEB-INF/web.xml">
             <filterset refid="profile"/>
         </copy>
+        
     </target>
 
     <target name="clear-profile-artifacts" depends="init"
@@ -284,12 +284,8 @@
         <copy file="${basedir}/resources/${project.name}-${profile}-ds.xml"
             tofile="${deploy.dir}/${project.name}-ds.xml"/>
     </target>
-
-    <target name="explode" depends="prepare-explode,create-dodeploy"/>
-
-    <available file="${deploy.dir}/${project.name}.war.deployed" property="deployed.file.exists"/>
     
-    <target name="prepare-explode" depends="stage,datasource" 
+    <target name="explode" depends="stage,datasource" 
             description="Deploy the exploded archive">
         <fail unless="jboss.home">jboss.home not set</fail>
         
@@ -298,13 +294,8 @@
             <fileset dir="${war.dir}"/>
         </copy>
     </target>
-
-    <target name="create-dodeploy" unless="deployed.file.exists">
-        <touch file="${deploy.dir}/${project.name}.war.dodeploy"/>
-    </target>
     
     <target name="unexplode" description="Undeploy the exploded archive">
-        <delete file="${deploy.dir}/${project.name}.war.deployed"/>
         <delete failonerror="no">
             <fileset dir="${war.deploy.dir}">
                 <exclude name="**/*.jar"/>
@@ -326,9 +317,7 @@
 
     <target name="restart-exploded" unless="archive.deployed" description="Deploy exploded archive if not deployed as packaged archive">
         <antcall target="explode"/>
-        <!-- <touch file="${war.deploy.dir}/WEB-INF/web.xml"/> -->
-        <!-- JBoss AS 7 way how to say deploy exploded archive -->
-        <touch file="${deploy.dir}/${project.name}.war.dodeploy"/>
+        <touch file="${war.deploy.dir}/WEB-INF/web.xml"/>
     </target>
 
     <target name="restart-deployed" if="archive.deployed" description="Deploy packaged archive if deployed as packaged archive">
@@ -411,66 +400,49 @@
                 <exclude name="import*.sql"/>
                 <exclude name="${project.name}-*-ds.xml"/>
                 <exclude name="components-*.properties"/>
-    			<exclude name="WEB-INF/web-*.xml"/>
-    			<exclude name="WEB-INF/web.xml"/>            	
             </fileset>
             <fileset dir="${basedir}/view"/>
-        	<fileset dir="${basedir}/resources-test"/>
         </copy>
-        <copy tofile="${test.dir}/META-INF/persistence.xml"
-            file="${basedir}/resources/META-INF/persistence-test.xml"/>
-        <copy tofile="${test.dir}/import.sql"
-            file="${basedir}/resources/import-test.sql"/>
-        <copy tofile="${test.dir}/components.properties"
-            file="${basedir}/resources/components-test.properties"/>
-    	<copy tofile="${test.dir}/WEB-INF/web.xml"
-    	            file="${basedir}/resources/WEB-INF/web-test.xml"/>    	
+        <copy tofile="${test.dir}/META-INF/persistence.xml" 
+              file="${basedir}/resources/META-INF/persistence-test.xml"/>
+        <copy tofile="${test.dir}/import.sql" 
+              file="${basedir}/resources/import-test.sql"/>
+        <copy tofile="${test.dir}/components.properties" 
+              file="${basedir}/resources/components-test.properties"/>
         <copy todir="${test.dir}" flatten="true">
             <fileset dir="${src.test.dir}">
-                <include name="**/*Test.xml"/>
+                <include name="**/*Test.xml" />
             </fileset>
-        </copy>      
+        </copy>
     </target>
     
-    <target name="test" depends="buildtest" description="Run the tests">
-        <!-- <fail message="Test target is currently not supported"/> -->
+    <target name="test" depends="buildtest" description="Run the tests">            
         <fail message="Cannot run tests because path to project contains spaces.">
             <condition>
                 <contains string="${basedir}" substring=" "/>
             </condition>
         </fail>
-        <!--      <condition property="incompatible.jdk" value="true">
+        <condition property="incompatible.jdk" value="true">
             <and>
                 <equals arg1="${ant.java.version}" arg2="1.6"/>
                 <not><available classname="javax.xml.bind.JAXB"/></not>
             </and>
-        </condition> 
+        </condition>
         <fail if="incompatible.jdk">You are using an incompatible JDK 6. Please use Sun JDK 6 Update 4 (1.6.0_04) or newer or use Open JDK 6.</fail>
-        -->
-        <!--<taskdef resource="testngtasks" classpath="${testng.jar}"/>-->
+        <taskdef resource="testngtasks" classpath="${testng.jar}" />
         <path id="test.path">
-            <path path="${test.dir}"/>
+            <path path="${test.dir}" />
             <fileset dir="${lib.dir}/test">
                 <include name="*.jar"/>
             </fileset>
-            <path refid="build.classpath"/>
+            <path path="${bootstrap.dir}" />
+            <path refid="build.classpath" />
         </path>
-        <mkdir dir="${basedir}/test-report"/>
-        <junit printsummary="yes">
-            <!--outputdir="${basedir}/test-report">-->
-            <!--<jvmarg line="-Dsun.lang.ClassLoader.allowArraySyntax=true"/>-->
-            <formatter type="xml"/>
-            <classpath refid="test.path"/>
-            <batchtest todir="${basedir}/test-report">
-                <fileset dir="${test.dir}">
-                    <include name="**/*Test.class"/>
-                </fileset>
-           </batchtest>
-        </junit>
-        <junitreport todir="${basedir}/test-report">
-            <fileset dir="${basedir}/test-report"/>
-            <report todir="${basedir}/test-report"/>
-        </junitreport>
+        <testng outputdir="${basedir}/test-report">
+            <jvmarg line="-Dsun.lang.ClassLoader.allowArraySyntax=true"/>
+            <classpath refid="test.path" />
+            <xmlfileset dir="${test.dir}" includes="*Test.xml" />
+        </testng>
     </target>
 
     <target name="javadoc" depends="compile">
@@ -499,12 +471,12 @@
         <ant antfile="validate.xml" target="validateConfiguration"/>
     </target>
 
-   <target name="purge" depends="undeploy" description="Clean out JBoss AS temporary deployment files">
-        <delete dir="${deploy.dir}/${project.name}.war.undeployed"/>
-        <delete dir="${deploy.dir}/${project.name}-ds.xml.undeployed"/>
-        <delete dir="${deploy.dir}/${project.name}.war.failed"/>
-        <delete dir="${deploy.dir}/${project.name}-ds.xml.failed"/>
-        <delete dir="${deploy.dir}/${project.name}.war"/>
+    <target name="purge" depends="undeploy" description="Clean out JBoss AS temporary deployment files">
+        <delete dir="${jboss.home}/server/default/tmp/deploy"/>
+        <mkdir dir="${jboss.home}/server/default/tmp/deploy/"/>
+        <delete dir="${jboss.home}/server/default/tmp/sessions"/>
+        <mkdir dir="${jboss.home}/server/default/tmp/sessions"/>
+        <delete dir="${jboss.home}/server/default/work/jboss.web/localhost/${project.name}"/>
     </target>
 
 </project>

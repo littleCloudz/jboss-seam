@@ -246,8 +246,4 @@ public class MockFacesContext extends FacesContext
       return false;
    }
 
-   @Override
-   public MockPartialViewContext getPartialViewContext() {
-	   return new MockPartialViewContext();
-   }
 }

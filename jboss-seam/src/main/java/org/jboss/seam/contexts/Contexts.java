@@ -124,7 +124,7 @@ public class Contexts
                }
             }
          }
-         catch (LinkageError e)
+         catch (NoClassDefFoundError e)
          {
             // do nothing as this context is supposed to be active only with JSF view layer
          }

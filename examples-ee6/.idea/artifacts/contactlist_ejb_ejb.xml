@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="ejb-jar" name="contactlist-ejb:ejb">
+    <output-path>$PROJECT_DIR$/contactlist/contactlist-ejb/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>contactlist-ejb</module>
+        <packaging>ejb</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="contactlist-ejb-2.3.0.CR1.jar">
+      <element id="artifact" artifact-name="contactlist-ejb:ejb exploded" />
+    </root>
+  </artifact>
+</component>

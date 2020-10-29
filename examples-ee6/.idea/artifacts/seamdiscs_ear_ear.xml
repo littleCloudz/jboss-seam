@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="ear" name="seamdiscs-ear:ear">
+    <output-path>$PROJECT_DIR$/seamdiscs/seamdiscs-ear/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>seamdiscs-ear</module>
+        <packaging>ear</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="seam-seamdiscs.ear">
+      <element id="artifact" artifact-name="seamdiscs-ear:ear exploded" />
+    </root>
+  </artifact>
+</component>

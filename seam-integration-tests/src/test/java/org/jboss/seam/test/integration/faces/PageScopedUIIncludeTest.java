@@ -86,8 +86,8 @@ public class PageScopedUIIncludeTest
       assertTrue(page.getBody().getTextContent().contains("Hello, xyzzy"));
    }
    
-   //@Ignore // work with JSF 2.1.19 on EAP 6.1.0
-   @Test // JBSEAM-5002
+   @Ignore // JBSEAM-5002
+   @Test
    public void testComponent2() throws Exception
    {
       HtmlPage page = client.getPage(contextPath + "test.seam");

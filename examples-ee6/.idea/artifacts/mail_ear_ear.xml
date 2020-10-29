@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="ear" name="mail-ear:ear">
+    <output-path>$PROJECT_DIR$/mail/mail-ear/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>mail-ear</module>
+        <packaging>ear</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="seam-mail.ear">
+      <element id="artifact" artifact-name="mail-ear:ear exploded" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="registration-web:war">
+    <output-path>$PROJECT_DIR$/registration/registration-web/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>registration-web</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="registration-web-2.3.0.CR1.war">
+      <element id="artifact" artifact-name="registration-web:war exploded" />
+    </root>
+  </artifact>
+</component>

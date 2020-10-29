@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="ejb-jar" name="booking-ejb (2) (org.jboss.seam.examples-ee6.metawidget):ejb">
+    <output-path>$PROJECT_DIR$/metawidget/booking/booking-ejb/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>booking-ejb (2) (org.jboss.seam.examples-ee6.metawidget)</module>
+        <packaging>ejb</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="booking-ejb-2.3.0.CR1.jar">
+      <element id="artifact" artifact-name="booking-ejb (2) (org.jboss.seam.examples-ee6.metawidget):ejb exploded" />
+    </root>
+  </artifact>
+</component>

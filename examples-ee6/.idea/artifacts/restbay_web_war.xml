@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="restbay-web:war">
+    <output-path>$PROJECT_DIR$/restbay/restbay-web/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>restbay-web</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="restbay-web-2.3.0.CR1.war">
+      <element id="artifact" artifact-name="restbay-web:war exploded" />
+    </root>
+  </artifact>
+</component>

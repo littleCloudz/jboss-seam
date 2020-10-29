@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="seambay-web:war">
+    <output-path>$PROJECT_DIR$/seambay/seambay-web/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>seambay-web</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="seambay-web-2.3.0.CR1.war">
+      <element id="artifact" artifact-name="seambay-web:war exploded" />
+    </root>
+  </artifact>
+</component>

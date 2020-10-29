@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="ejb-jar" name="excel-ejb:ejb">
+    <output-path>$PROJECT_DIR$/excel/excel-ejb/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>excel-ejb</module>
+        <packaging>ejb</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="excel-ejb-2.3.0.CR1.jar">
+      <element id="artifact" artifact-name="excel-ejb:ejb exploded" />
+    </root>
+  </artifact>
+</component>

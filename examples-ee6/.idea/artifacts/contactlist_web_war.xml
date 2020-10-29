@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="contactlist-web:war">
+    <output-path>$PROJECT_DIR$/contactlist/contactlist-web/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>contactlist-web</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="contactlist-web-2.3.0.CR1.war">
+      <element id="artifact" artifact-name="contactlist-web:war exploded" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="ejb-jar" name="openid-ejb:ejb">
+    <output-path>$PROJECT_DIR$/openid/openid-ejb/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>openid-ejb</module>
+        <packaging>ejb</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="openid-ejb-2.3.0.CR1.jar">
+      <element id="artifact" artifact-name="openid-ejb:ejb exploded" />
+    </root>
+  </artifact>
+</component>

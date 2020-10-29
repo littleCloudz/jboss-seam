@@ -1,9 +1,10 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <artifactId>jboss-seam-parent</artifactId>
         <groupId>org.jboss.seam</groupId>
-        <version>2.3.2-SNAPSHOT</version>
+        <version>2.3.0.CR1</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
     <artifactId>jboss-seam-ui</artifactId>
@@ -15,7 +16,7 @@
             <plugin>
                 <groupId>org.richfaces.cdk</groupId>
                 <artifactId>maven-cdk-plugin</artifactId>
-                <version>${version.richfaces.cdk}</version>
+                <version>${version.richfaces}</version>
                 <executions>
                     <execution>
                         <phase>generate-sources</phase>
@@ -43,7 +44,7 @@
             <plugin>
                <groupId>org.jboss.seam</groupId>
                <artifactId>seam-cdk-helper</artifactId>
-               <version>1.0.1</version>
+               <version>1.0-SNAPSHOT</version>
                <executions>
                   <execution>
                      <phase>generate-sources</phase>
@@ -101,7 +102,7 @@
                                 </goals>
                              </pluginExecutionFilter>
                              <action>
-                                <ignore />
+                                <ignore></ignore>
                              </action>
                           </pluginExecution>
                        </pluginExecutions>
@@ -136,6 +137,11 @@
         </dependency>
 
         <dependency>
+            <groupId>org.jboss.seam</groupId>
+            <artifactId>jboss-seam-jul</artifactId>
+        </dependency>
+
+        <dependency>
             <groupId>antlr</groupId>
             <artifactId>antlr</artifactId>
             <optional>true</optional>
@@ -144,7 +150,7 @@
         <dependency>
             <groupId>org.richfaces.cdk</groupId>
             <artifactId>annotations</artifactId>
-            <version>${version.richfaces.cdk}</version>
+            <version>${version.richfaces}</version>
             <optional>true</optional>
         </dependency>
 

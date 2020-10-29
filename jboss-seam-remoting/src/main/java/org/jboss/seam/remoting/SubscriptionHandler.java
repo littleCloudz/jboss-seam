@@ -17,7 +17,6 @@ import org.jboss.seam.core.Manager;
 import org.jboss.seam.remoting.messaging.RemoteSubscriber;
 import org.jboss.seam.remoting.messaging.SubscriptionRegistry;
 import org.jboss.seam.remoting.messaging.SubscriptionRequest;
-import org.jboss.seam.util.XML;
 import org.jboss.seam.web.ServletContexts;
 
 /**
@@ -41,7 +40,7 @@ public class SubscriptionHandler extends BaseRequestHandler implements RequestHa
     response.setContentType("text/xml");
 
     // Parse the incoming request as XML
-    SAXReader xmlReader = XML.getSafeSaxReader();
+    SAXReader xmlReader = new SAXReader();
     Document doc = xmlReader.read(request.getInputStream());
     Element env = doc.getRootElement();
 

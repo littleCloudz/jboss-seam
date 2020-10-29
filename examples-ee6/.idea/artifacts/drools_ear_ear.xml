@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="ear" name="drools-ear:ear">
+    <output-path>$PROJECT_DIR$/drools/drools-ear/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>drools-ear</module>
+        <packaging>ear</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="seam-drools.ear">
+      <element id="artifact" artifact-name="drools-ear:ear exploded" />
+    </root>
+  </artifact>
+</component>

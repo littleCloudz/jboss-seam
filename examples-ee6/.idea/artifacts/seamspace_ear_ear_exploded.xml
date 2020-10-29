@@ -1,0 +1,49 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-ear" name="seamspace-ear:ear exploded">
+    <output-path>$PROJECT_DIR$/seamspace/seamspace-ear/target/seam-seamspace</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <exploded>true</exploded>
+        <module>seamspace-ear</module>
+        <packaging>ear</packaging>
+      </options>
+    </properties>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="seamspace-ear/javaeeApplication/JavaEE" />
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/seamspace/seamspace-ear/target/seam-seamspace/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="dir-copy" path="$PROJECT_DIR$/seamspace/seamspace-ear/src/main/application" />
+      <element id="archive" name="seamspace-web.war">
+        <element id="artifact" artifact-name="seamspace-web:war exploded" />
+      </element>
+      <element id="archive" name="seamspace-ejb.jar">
+        <element id="artifact" artifact-name="seamspace-ejb:ejb exploded" />
+      </element>
+      <element id="file-copy" path="$MAVEN_REPOSITORY$/org/jboss/seam/jboss-seam/2.3.0.CR1/jboss-seam-2.3.0.CR1.jar" output-file-name="jboss-seam.jar" />
+      <element id="directory" name="lib">
+        <element id="library" level="project" name="Maven: org.testng:testng:5.14.10" />
+        <element id="library" level="project" name="Maven: org.beanshell:bsh:2.0b4" />
+        <element id="library" level="project" name="Maven: com.beust:jcommander:1.12" />
+        <element id="library" level="project" name="Maven: org.yaml:snakeyaml:1.6" />
+        <element id="library" level="project" name="Maven: junit:junit:4.8.2" />
+        <element id="library" level="project" name="Maven: org.jboss.el:jboss-el:1.0_02.CR6" />
+        <element id="library" level="project" name="Maven: javax.el:el-api:1.0" />
+        <element id="library" level="project" name="Maven: commons-digester:commons-digester:2.1" />
+        <element id="library" level="project" name="Maven: commons-beanutils:commons-beanutils:1.7.0" />
+        <element id="library" level="project" name="Maven: org.drools:drools-core:5.3.3.Final" />
+        <element id="library" level="project" name="Maven: org.mvel:mvel2:2.1.0.drools16" />
+        <element id="library" level="project" name="Maven: org.drools:knowledge-api:5.3.3.Final" />
+        <element id="library" level="project" name="Maven: org.drools:drools-compiler:5.3.3.Final" />
+        <element id="library" level="project" name="Maven: org.antlr:antlr-runtime:3.3" />
+        <element id="library" level="project" name="Maven: org.antlr:antlr:3.3" />
+        <element id="library" level="project" name="Maven: org.antlr:stringtemplate:3.2.1" />
+        <element id="library" level="project" name="Maven: antlr:antlr:2.7.6" />
+        <element id="library" level="project" name="Maven: org.eclipse.jdt.core.compiler:ecj:3.5.1" />
+        <element id="library" level="project" name="Maven: org.drools:drools-decisiontables:5.3.3.Final" />
+        <element id="library" level="project" name="Maven: org.drools:drools-templates:5.3.3.Final" />
+        <element id="library" level="project" name="Maven: net.sourceforge.jexcelapi:jxl:2.6.10" />
+      </element>
+    </root>
+  </artifact>
+</component>

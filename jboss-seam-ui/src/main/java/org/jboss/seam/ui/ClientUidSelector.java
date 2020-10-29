@@ -28,12 +28,7 @@ public class ClientUidSelector extends Selector
    @Create
    public void onCreate()
    {
-      String requestContextPath = FacesContext.getCurrentInstance().getExternalContext().getRequestContextPath();
-      if (requestContextPath.isEmpty()) 
-      {
-          requestContextPath = "/";
-      }
-      setCookiePath(requestContextPath);
+      setCookiePath(FacesContext.getCurrentInstance().getExternalContext().getRequestContextPath());
       setCookieMaxAge(-1);
       setCookieEnabled(true);
       clientUid = getCookieValue();
@@ -41,10 +36,9 @@ public class ClientUidSelector extends Selector
 
    public void seed()
    {
-      if (!isSet()) 
-      {
+      if (!isSet()) {
     	 clientUid = RandomStringUtils.random(50, true, true);
-       setCookieValueIfEnabled(clientUid);
+         setCookieValueIfEnabled(clientUid);
       }
    }
 

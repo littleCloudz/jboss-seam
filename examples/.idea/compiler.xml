@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="restbay-ejb" />
+        <module name="booking-ejb (2) (org.jboss.seam.examples.metawidget)" />
+        <module name="rss-ear" />
+        <module name="booking-web (1) (org.jboss.seam.examples.booking)" />
+        <module name="wicket-ejb" />
+        <module name="excel-ejb" />
+        <module name="dvdstore-ejb" />
+        <module name="todo-ear" />
+        <module name="nestedbooking-ear" />
+        <module name="chatroom-ear" />
+        <module name="icefaces-ejb" />
+        <module name="seampay-web" />
+        <module name="spring-web" />
+        <module name="guice-ejb" />
+        <module name="quartz-web" />
+        <module name="openid-web" />
+        <module name="wicket-ear" />
+        <module name="seamspace-ejb" />
+        <module name="numberguess-web" />
+        <module name="messages-web" />
+        <module name="icefaces-ear" />
+        <module name="seamdiscs-ear" />
+        <module name="chatroom-ejb" />
+        <module name="rss-web" />
+        <module name="blog-ear" />
+        <module name="chatroom-web" />
+        <module name="seampay-ejb" />
+        <module name="todo-web" />
+        <module name="nestedbooking-web" />
+        <module name="progressbar-ear" />
+        <module name="drools-web" />
+        <module name="restbay-web" />
+        <module name="quartz-ejb" />
+        <module name="helloworld-ear" />
+        <module name="openid-ejb" />
+        <module name="wicket-web" />
+        <module name="numberguess-ejb" />
+        <module name="messages-ejb" />
+        <module name="todo-ejb" />
+        <module name="seambay-ear" />
+        <module name="registration-web" />
+        <module name="rss-ejb" />
+        <module name="seamdiscs-web" />
+        <module name="tasks-ejb" />
+        <module name="itext-ear" />
+        <module name="nestedbooking-ejb" />
+        <module name="seambay-ejb" />
+        <module name="contactlist-ear" />
+        <module name="mail-ear" />
+        <module name="ui-web" />
+        <module name="helloworld-web" />
+        <module name="blog-web" />
+        <module name="booking-ear (1) (org.jboss.seam.examples.booking)" />
+        <module name="registration-ejb" />
+        <module name="seamspace-ear" />
+        <module name="seambay-web" />
+        <module name="seamdiscs-ejb" />
+        <module name="tasks-ear" />
+        <module name="gwt-ear" />
+        <module name="tasks-web" />
+        <module name="metawidget-groovybooking-web" />
+        <module name="drools-ear" />
+        <module name="booking-ejb (1) (org.jboss.seam.examples.booking)" />
+        <module name="drools-ejb" />
+        <module name="excel-ear" />
+        <module name="itext-web" />
+        <module name="dvdstore-ear" />
+        <module name="progressbar-ejb" />
+        <module name="ui-ejb" />
+        <module name="helloworld-ejb" />
+        <module name="blog-ejb" />
+        <module name="gwt-ejb" />
+        <module name="contactlist-web" />
+        <module name="jee6-web" />
+        <module name="mail-web" />
+        <module name="guice-ear" />
+        <module name="icefaces-web" />
+        <module name="groovybooking-web" />
+        <module name="hibernate-web" />
+        <module name="seamspace-web" />
+        <module name="progressbar-web" />
+        <module name="gwt-web" />
+        <module name="itext-ejb" />
+        <module name="booking-ear (2) (org.jboss.seam.examples.metawidget)" />
+        <module name="seampay-ear" />
+        <module name="excel-web" />
+        <module name="booking-web (2) (org.jboss.seam.examples.metawidget)" />
+        <module name="dvdstore-web" />
+        <module name="contactlist-ejb" />
+        <module name="restbay-ear" />
+        <module name="mail-ejb" />
+        <module name="messages-ear" />
+        <module name="quartz-ear" />
+        <module name="openid-ear" />
+        <module name="guice-web" />
+        <module name="numberguess-ear" />
+        <module name="jpa-web" />
+        <module name="ui-ear" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="blog" target="1.6" />
+      <module name="blog-ear" target="1.6" />
+      <module name="blog-ejb" target="1.6" />
+      <module name="blog-web" target="1.6" />
+      <module name="booking (1) (org.jboss.seam.examples)" target="1.6" />
+      <module name="booking (2) (org.jboss.seam.examples.metawidget)" target="1.6" />
+      <module name="booking-ear (1) (org.jboss.seam.examples.booking)" target="1.6" />
+      <module name="booking-ear (2) (org.jboss.seam.examples.metawidget)" target="1.6" />
+      <module name="booking-ejb (1) (org.jboss.seam.examples.booking)" target="1.6" />
+      <module name="booking-ejb (2) (org.jboss.seam.examples.metawidget)" target="1.6" />
+      <module name="booking-web (1) (org.jboss.seam.examples.booking)" target="1.6" />
+      <module name="booking-web (2) (org.jboss.seam.examples.metawidget)" target="1.6" />
+      <module name="chatroom" target="1.6" />
+      <module name="chatroom-ear" target="1.6" />
+      <module name="chatroom-ejb" target="1.6" />
+      <module name="chatroom-web" target="1.6" />
+      <module name="contactlist" target="1.6" />
+      <module name="contactlist-ear" target="1.6" />
+      <module name="contactlist-ejb" target="1.6" />
+      <module name="contactlist-web" target="1.6" />
+      <module name="drools" target="1.5" />
+      <module name="drools-ear" target="1.5" />
+      <module name="drools-ejb" target="1.5" />
+      <module name="drools-web" target="1.5" />
+      <module name="dvdstore" target="1.6" />
+      <module name="dvdstore-ear" target="1.6" />
+      <module name="dvdstore-ejb" target="1.6" />
+      <module name="dvdstore-web" target="1.6" />
+      <module name="examples" target="1.6" />
+      <module name="excel" target="1.6" />
+      <module name="excel-ear" target="1.6" />
+      <module name="excel-ejb" target="1.6" />
+      <module name="excel-web" target="1.6" />
+      <module name="groovybooking" target="1.6" />
+      <module name="groovybooking-web" target="1.6" />
+      <module name="guice" target="1.6" />
+      <module name="guice-ear" target="1.6" />
+      <module name="guice-ejb" target="1.6" />
+      <module name="guice-web" target="1.6" />
+      <module name="gwt" target="1.6" />
+      <module name="gwt-ear" target="1.6" />
+      <module name="gwt-ejb" target="1.6" />
+      <module name="gwt-web" target="1.6" />
+      <module name="helloworld" target="1.6" />
+      <module name="helloworld-ear" target="1.6" />
+      <module name="helloworld-ejb" target="1.6" />
+      <module name="helloworld-web" target="1.6" />
+      <module name="hibernate" target="1.6" />
+      <module name="hibernate-web" target="1.6" />
+      <module name="icefaces" target="1.6" />
+      <module name="icefaces-ear" target="1.6" />
+      <module name="icefaces-ejb" target="1.6" />
+      <module name="icefaces-web" target="1.6" />
+      <module name="itext" target="1.6" />
+      <module name="itext-ear" target="1.6" />
+      <module name="itext-ejb" target="1.6" />
+      <module name="itext-web" target="1.6" />
+      <module name="jee6" target="1.6" />
+      <module name="jee6-web" target="1.6" />
+      <module name="jpa" target="1.6" />
+      <module name="jpa-web" target="1.6" />
+      <module name="mail" target="1.6" />
+      <module name="mail-ear" target="1.6" />
+      <module name="mail-ejb" target="1.6" />
+      <module name="mail-web" target="1.6" />
+      <module name="messages" target="1.6" />
+      <module name="messages-ear" target="1.6" />
+      <module name="messages-ejb" target="1.6" />
+      <module name="messages-web" target="1.6" />
+      <module name="metawidget-groovybooking" target="1.6" />
+      <module name="metawidget-groovybooking-web" target="1.6" />
+      <module name="nestedbooking" target="1.6" />
+      <module name="nestedbooking-ear" target="1.6" />
+      <module name="nestedbooking-ejb" target="1.6" />
+      <module name="nestedbooking-web" target="1.6" />
+      <module name="numberguess" target="1.6" />
+      <module name="numberguess-ear" target="1.6" />
+      <module name="numberguess-ejb" target="1.6" />
+      <module name="numberguess-web" target="1.6" />
+      <module name="openid" target="1.6" />
+      <module name="openid-ear" target="1.6" />
+      <module name="openid-ejb" target="1.6" />
+      <module name="openid-web" target="1.6" />
+      <module name="progressbar" target="1.6" />
+      <module name="progressbar-ear" target="1.6" />
+      <module name="progressbar-ejb" target="1.6" />
+      <module name="progressbar-web" target="1.6" />
+      <module name="quartz" target="1.6" />
+      <module name="quartz-ear" target="1.6" />
+      <module name="quartz-ejb" target="1.6" />
+      <module name="quartz-web" target="1.6" />
+      <module name="registration" target="1.6" />
+      <module name="registration-ejb" target="1.6" />
+      <module name="registration-web" target="1.6" />
+      <module name="restbay" target="1.6" />
+      <module name="restbay-ear" target="1.6" />
+      <module name="restbay-ejb" target="1.6" />
+      <module name="restbay-web" target="1.6" />
+      <module name="rss" target="1.6" />
+      <module name="rss-ear" target="1.6" />
+      <module name="rss-ejb" target="1.6" />
+      <module name="rss-web" target="1.6" />
+      <module name="seambay" target="1.6" />
+      <module name="seambay-ear" target="1.6" />
+      <module name="seambay-ejb" target="1.6" />
+      <module name="seambay-web" target="1.6" />
+      <module name="seamdiscs" target="1.6" />
+      <module name="seamdiscs-ear" target="1.6" />
+      <module name="seamdiscs-ejb" target="1.6" />
+      <module name="seamdiscs-web" target="1.6" />
+      <module name="seampay" target="1.6" />
+      <module name="seampay-ear" target="1.6" />
+      <module name="seampay-ejb" target="1.6" />
+      <module name="seampay-web" target="1.6" />
+      <module name="seamspace" target="1.6" />
+      <module name="seamspace-ear" target="1.6" />
+      <module name="seamspace-ejb" target="1.6" />
+      <module name="seamspace-web" target="1.6" />
+      <module name="spring" target="1.6" />
+      <module name="spring-web" target="1.6" />
+      <module name="tasks" target="1.6" />
+      <module name="tasks-ear" target="1.6" />
+      <module name="tasks-ejb" target="1.6" />
+      <module name="tasks-web" target="1.6" />
+      <module name="todo" target="1.5" />
+      <module name="todo-ear" target="1.5" />
+      <module name="todo-ejb" target="1.5" />
+      <module name="todo-web" target="1.5" />
+      <module name="ui" target="1.6" />
+      <module name="ui-ear" target="1.6" />
+      <module name="ui-ejb" target="1.6" />
+      <module name="ui-web" target="1.6" />
+      <module name="wicket" target="1.6" />
+      <module name="wicket-ear" target="1.6" />
+      <module name="wicket-ejb" target="1.6" />
+      <module name="wicket-web" target="1.6" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

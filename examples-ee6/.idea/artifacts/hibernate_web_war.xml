@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="hibernate-web:war">
+    <output-path>$PROJECT_DIR$/hibernate/hibernate-web/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>hibernate-web</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="jboss-seam-hibernate.war">
+      <element id="artifact" artifact-name="hibernate-web:war exploded" />
+    </root>
+  </artifact>
+</component>

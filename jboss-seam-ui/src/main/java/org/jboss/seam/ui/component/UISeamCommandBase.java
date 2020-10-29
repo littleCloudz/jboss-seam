@@ -20,13 +20,8 @@ import javax.faces.model.DataModel;
 import org.jboss.seam.core.PropagationType;
 import org.jboss.seam.navigation.Pages;
 import org.jboss.seam.ui.util.ViewUrlBuilder;
+import org.jboss.seam.ui.util.cdk.MethodBindingToMethodExpression;
 
-/**
- * Parent of all Seam command like JSF components 
- * 
- * @author mnovotny
- *
- */
 public abstract class UISeamCommandBase extends UIOutput implements ActionSource2
 {
 
@@ -53,9 +48,7 @@ public abstract class UISeamCommandBase extends UIOutput implements ActionSource
          viewId = Pages.getViewId(getFacesContext());
       }
 
-      // JBSEAM-5097 encoded actionMethod in URL causes SafeActions to fail  
-      //ViewUrlBuilder url = new ViewUrlBuilder(viewId, getFragment(), !isPortletRequest(getFacesContext()));
-      ViewUrlBuilder url = new ViewUrlBuilder(viewId, getFragment());
+      ViewUrlBuilder url = new ViewUrlBuilder(viewId, getFragment(), !isPortletRequest(getFacesContext()));
 
       Set<String> usedParameters = new HashSet<String>();
       for (Object child : getChildren())
@@ -104,13 +97,6 @@ public abstract class UISeamCommandBase extends UIOutput implements ActionSource
          uiPropagation.setPageflow(getPageflow());
          url.addParameter(uiPropagation);
       }
-      
-//      if (propagationType == PropagationType.NONE)
-//      {
-//         UIConversationPropagation uiPropagation = UIConversationPropagation.newInstance();
-//         uiPropagation.setType(getPropagation());         
-//         url.addParameter(uiPropagation);
-//      }
       
       if (getConversationName() != null)
       {

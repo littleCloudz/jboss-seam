@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="ejb-jar" name="icefaces-ejb:ejb">
+    <output-path>$PROJECT_DIR$/icefaces/icefaces-ejb/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>icefaces-ejb</module>
+        <packaging>ejb</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="icefaces-ejb-2.3.0.CR1.jar">
+      <element id="artifact" artifact-name="icefaces-ejb:ejb exploded" />
+    </root>
+  </artifact>
+</component>

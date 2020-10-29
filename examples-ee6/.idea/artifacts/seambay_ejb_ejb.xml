@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="ejb-jar" name="seambay-ejb:ejb">
+    <output-path>$PROJECT_DIR$/seambay/seambay-ejb/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>seambay-ejb</module>
+        <packaging>ejb</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="seambay-ejb-2.3.0.CR1.jar">
+      <element id="artifact" artifact-name="seambay-ejb:ejb exploded" />
+    </root>
+  </artifact>
+</component>
